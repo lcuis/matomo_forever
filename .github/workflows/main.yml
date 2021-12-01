@@ -92,7 +92,7 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          filename: 'docs/matomo_forever_example_macos_and_ios.zip'
+          filename: 'docs/matomo_forever_example_macos.zip'
           path: 'example/build/macos/Build/Products/Release/'
       -
         name: Deploy to GitHub Pages
