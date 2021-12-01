@@ -78,9 +78,11 @@ jobs:
       - run: flutter pub get
       - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
       - run: pushd example&&flutter create .
+      - run: pushd example&&flutter pub get
       - run: pushd example&&flutter build ios --release --no-codesign
       - run: pushd example&&flutter create .
-      - run: flutter config --enable-macos-desktop
+      - run: pushd example&&flutter config --enable-macos-desktop
+      - run: pushd example&&flutter pub get
       - run: pushd example&&flutter build macos --release
       - run: mkdir -p docs
       - run: rm -rf docs/*
@@ -101,29 +103,29 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
-  windows:
-    runs-on: windows-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
-        with:
-          channel: beta
-      - run: pushd example&&flutter config --enable-windows-desktop
-      - run: pushd example&&flutter create .&&flutter build windows
-      - run: md docs
-      - name: Archive Windows Release
-        uses: thedoctor0/zip-release@master
-        with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example_windows.zip'
-          path: 'example/build/windows/runner/Release/'
-      -
-        name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          build_dir: docs
-          jekyll: false
-          keep_history: true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+#  windows:
+#    runs-on: windows-latest
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: subosito/flutter-action@v1
+#        with:
+#          channel: beta
+#      - run: pushd example&&flutter config --enable-windows-desktop
+#      - run: pushd example&&flutter create .&&flutter build windows
+#      - run: md docs
+#      - name: Archive Windows Release
+#        uses: thedoctor0/zip-release@master
+#        with:
+#          type: 'zip'
+#          filename: 'docs/matomo_forever_example_windows.zip'
+#          path: 'example/build/windows/runner/Release/'
+#      -
+#        name: Deploy to GitHub Pages
+#        if: success()
+#        uses: crazy-max/ghaction-github-pages@v2
+#        with:
+#          build_dir: docs
+#          jekyll: false
+#          keep_history: true
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
