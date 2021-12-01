@@ -93,7 +93,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'docs/matomo_forever_example_macos_and_ios.zip'
-          path: 'example/build/'
+          path: 'example/build/macos/Build/Products/Release/'
       -
         name: Deploy to GitHub Pages
         if: success()
