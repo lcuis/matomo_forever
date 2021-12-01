@@ -22,7 +22,9 @@ jobs:
       - run: flutter analyze
       - run: flutter config --enable-linux-desktop
       - run: flutter test --dart-define="site_url=${{ secrets.site_url }}" --dart-define="token_auth=${{ secrets.token_auth }}" --dart-define="idsite=${{ secrets.idsite }}" --dart-define="action_name=${{ secrets.action_name }}"
-      - name: Patch for linux build
+      - run: mkdir -p docs
+      - run: rm -rf docs/*
+      - name: Installations for linux build
         run: |
           sudo apt-get update -y
           sudo apt-get install -y clang ninja-build libgtk-3-dev
@@ -31,17 +33,21 @@ jobs:
         uses: thedoctor0/zip-release@master
         with:
           type: 'zip'
-          filename: 'matomo_forever_example.zip'
+          filename: 'docs/matomo_forever_example.zip'
           path: 'example/build/linux/x64/release/bundle/'
-      - name: Upload linux to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          path: "matomo_forever_example.zip"
+          build_dir: docs
         env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-      - name: Upload web to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
         with:
-          path: "example/build/web"
+          build_dir: example/build/web
         env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
