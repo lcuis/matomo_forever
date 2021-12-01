@@ -73,13 +73,15 @@ jobs:
           java-version: '11'
       - uses: subosito/flutter-action@v1
         with:
-          flutter-version: '2.0.5'
-      - run: flutter upgrade
-      - run: flutter pub get
-      - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
-      - run: pushd example&&flutter create .
-      - run: pushd example&&flutter pub get
-      - run: pushd example&&flutter build ios --release --no-codesign
+          flutter-version: '2.5.3'
+
+#      - run: flutter upgrade
+#      - run: flutter pub get
+#      - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
+#      - run: pushd example&&flutter create .
+#      - run: pushd example&&flutter pub get
+#      - run: pushd example&&flutter build ios --release --no-codesign
+
       - run: pushd example&&flutter create .
       - run: pushd example&&flutter config --enable-macos-desktop
       - run: pushd example&&flutter pub get
