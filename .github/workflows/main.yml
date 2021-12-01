@@ -75,10 +75,12 @@ jobs:
         with:
           flutter-version: '2.0.5'
       - run: flutter pub get
-      - run: flutter config --enable-macos-desktop
-      - run: pushd example&&flutter create .&&flutter build macos --release
-      - run: sed -i '' -e 's/# platform/platform/g' example/ios/Podfile
+      - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
+      - run: pushd example&&flutter create .
       - run: pushd example&&flutter build ios --release --no-codesign
+      - run: pushd example&&flutter create .
+      - run: flutter config --enable-macos-desktop
+      - run: pushd example&&flutter build macos --release
       - name: Archive ios and mac Release
         uses: thedoctor0/zip-release@master
         with:
