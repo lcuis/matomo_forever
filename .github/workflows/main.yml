@@ -22,6 +22,10 @@ jobs:
       - run: flutter analyze
       - run: flutter config --enable-linux-desktop
       - run: flutter test --dart-define="site_url=${{ secrets.site_url }}" --dart-define="token_auth=${{ secrets.token_auth }}" --dart-define="idsite=${{ secrets.idsite }}" --dart-define="action_name=${{ secrets.action_name }}"
+      - name: Patch for linux build
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y clang ninja-build libgtk-3-dev
       - run: pushd example&&flutter build linux&&flutter build web
       - name: Archive Linux Release
         uses: thedoctor0/zip-release@master
