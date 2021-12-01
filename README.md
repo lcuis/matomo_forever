@@ -38,6 +38,7 @@ The following builds of the example app are available from CI/CD:
 - [Linux desktop](https://lcuis.github.io/matomo_forever/matomo_forever_example_linux.zip)
 - [Web](https://lcuis.github.io/matomo_forever/matomo_forever_example_web.zip)
 - [Windows](https://lcuis.github.io/matomo_forever/matomo_forever_example_windows.zip)
+- [MacOS](https://lcuis.github.io/matomo_forever/matomo_forever_example_macos.zip)
 
 Also, the example app is available from a browser directly [here](https://lcuis.github.io/matomo_forever/). To see it work, you may have to disable your ad-blocker.
 
