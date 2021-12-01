@@ -29,14 +29,16 @@ This plugin has been successfully tested on *Android*, *Linux* and *Chrome*. It 
 An example project app is included in the main project under the `example` folder.
 This example app is a good way to interact with a Matomo server as a client.
 
+![matomo_forever example app screenshot](https://github.com/lcuis/matomo_forever/raw/master/doc/web_screenshot.png)
+
 ### Demonstration
 
-The following builds are available from CI/CD:
+The following builds of the example app are available from CI/CD:
 - [Android](https://lcuis.github.io/matomo_forever/matomo_forever_example_android.apk)
 - [Linux desktop](https://lcuis.github.io/matomo_forever/matomo_forever_example_linux.zip)
 - [Web](https://lcuis.github.io/matomo_forever/matomo_forever_example_web.zip)
 
-Also, the app is available from a browser [here](https://lcuis.github.io/matomo_forever/).
+Also, the example app is available from a browser [here](https://lcuis.github.io/matomo_forever/).
 
 ### Code
 
