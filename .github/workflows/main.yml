@@ -59,7 +59,7 @@ jobs:
         with:
           build_dir: docs
           jekyll: false
-          keep_history: false
+          keep_history: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
@@ -109,8 +109,8 @@ jobs:
           channel: beta
       - run: pushd example&&flutter config --enable-windows-desktop
       - run: pushd example&&flutter create .&&flutter build windows
-      - run: mkdir -p docs
-      - run: rm -rf docs/*
+      - run: md docs
+      - run: rd /s /q docs/*
       - name: Archive Windows Release
         uses: thedoctor0/zip-release@master
         with:
