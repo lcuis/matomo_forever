@@ -74,7 +74,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           flutter-version: '2.0.5'
-      - run: brew upgrade dart
+      - run: flutter upgrade
       - run: flutter pub get
       - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
       - run: pushd example&&flutter create .
@@ -111,7 +111,6 @@ jobs:
       - run: pushd example&&flutter config --enable-windows-desktop
       - run: pushd example&&flutter create .&&flutter build windows
       - run: md docs
-      - run: rd /s /q docs/*
       - name: Archive Windows Release
         uses: thedoctor0/zip-release@master
         with:
