@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +85,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638354977976</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Publishing web to pages.">
+      <created>1638356458492</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638356458492</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -100,6 +106,7 @@
     <MESSAGE value="Fixed some warnings in test." />
     <MESSAGE value="Added linux-desktop compilation required installations to CI-CD." />
     <MESSAGE value="Deploying to pages instead of wiki." />
-    <option name="LAST_COMMIT_MESSAGE" value="Deploying to pages instead of wiki." />
+    <MESSAGE value="Publishing web to pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Publishing web to pages." />
   </component>
 </project>

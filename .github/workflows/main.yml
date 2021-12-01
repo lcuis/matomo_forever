@@ -27,18 +27,18 @@ jobs:
 #          sudo apt-get update -y
 #          sudo apt-get install -y clang ninja-build libgtk-3-dev
 #      - run: pushd example&&flutter build linux
+#      - name: Archive Linux Release
+#        uses: thedoctor0/zip-release@master
+#        with:
+#          type: 'zip'
+#          filename: 'docs/matomo_forever_example.zip'
+#          path: 'example/build/linux/x64/release/bundle/'
       - run: pushd example&&flutter build web
       - run: mkdir -p docs
       - run: rm -rf docs/*
       - run: cp -r example/build/web/* docs/
       - run: sed -i 's/main\.dart\.js/matomo_forever\/main\.dart\.js/g' docs/index.html
       - run: sed -i 's/flutter_service_worker/matomo_forever\/flutter_service_worker/g' docs/index.html
-      - name: Archive Linux Release
-        uses: thedoctor0/zip-release@master
-        with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example.zip'
-          path: 'example/build/linux/x64/release/bundle/'
       -
         name: Deploy to GitHub Pages
         if: success()
