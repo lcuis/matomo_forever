@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the track method from the MatomoForever class, for the Dart programming language.">
+  <title>track method - MatomoForever class - matomo_forever library - Dart API</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../static-assets/github.css?v1">
+  <link rel="stylesheet" href="../../static-assets/styles.css?v1">
+  <link rel="icon" href="../../static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href="../../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../../index.html">matomo_forever</a></li>
+    <li><a href="../../matomo_forever/matomo_forever-library.html">matomo_forever</a></li>
+    <li><a href="../../matomo_forever/MatomoForever-class.html">MatomoForever</a></li>
+    <li class="self-crumb">track method</li>
+  </ol>
+  <div class="self-name">track</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div>
+<h1><span class="kind-method">track</span> method 
+    <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+</h1></div>
+
+    <section class="multi-line-signature">
+      
+
+<span class="returntype"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span>
+<span class="name ">track</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="track-param-actionName"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">actionName</span>, </span></li>
+<li><span class="parameter" id="track-param-url">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">url</span>, </span></li>
+<li><span class="parameter" id="track-param-rand"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rand</span>, </span></li>
+<li><span class="parameter" id="track-param-urlRef"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">urlRef</span>, </span></li>
+<li><span class="parameter" id="track-param-cvar"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cvar</span>, </span></li>
+<li><span class="parameter" id="track-param-idVc"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">idVc</span>, </span></li>
+<li><span class="parameter" id="track-param-viewTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">viewTs</span>, </span></li>
+<li><span class="parameter" id="track-param-idTs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">idTs</span>, </span></li>
+<li><span class="parameter" id="track-param-rcn"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rcn</span>, </span></li>
+<li><span class="parameter" id="track-param-rck"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">rck</span>, </span></li>
+<li><span class="parameter" id="track-param-res"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">res</span>, </span></li>
+<li><span class="parameter" id="track-param-h"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">h</span>, </span></li>
+<li><span class="parameter" id="track-param-m"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">m</span>, </span></li>
+<li><span class="parameter" id="track-param-s"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">s</span>, </span></li>
+<li><span class="parameter" id="track-param-fla"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">fla</span>, </span></li>
+<li><span class="parameter" id="track-param-java"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">java</span>, </span></li>
+<li><span class="parameter" id="track-param-dir"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">dir</span>, </span></li>
+<li><span class="parameter" id="track-param-qt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">qt</span>, </span></li>
+<li><span class="parameter" id="track-param-realp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">realp</span>, </span></li>
+<li><span class="parameter" id="track-param-pdf"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">pdf</span>, </span></li>
+<li><span class="parameter" id="track-param-wma"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">wma</span>, </span></li>
+<li><span class="parameter" id="track-param-gears"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">gears</span>, </span></li>
+<li><span class="parameter" id="track-param-ag"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">ag</span>, </span></li>
+<li><span class="parameter" id="track-param-cookie"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">cookie</span>, </span></li>
+<li><span class="parameter" id="track-param-ua"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ua</span>, </span></li>
+<li><span class="parameter" id="track-param-lang"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lang</span>, </span></li>
+<li><span class="parameter" id="track-param-uid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">uid</span>, </span></li>
+<li><span class="parameter" id="track-param-cid"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cid</span>, </span></li>
+<li><span class="parameter" id="track-param-newVisit"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">newVisit</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension0"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension0</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension1"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension1</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension2"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension2</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension3"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension3</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension4"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension4</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension5"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension5</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension6"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension6</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension7"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension7</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension8"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension8</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension9"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension9</span>, </span></li>
+<li><span class="parameter" id="track-param-dimension10"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">dimension10</span>, </span></li>
+<li><span class="parameter" id="track-param-link"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">link</span>, </span></li>
+<li><span class="parameter" id="track-param-download"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">download</span>, </span></li>
+<li><span class="parameter" id="track-param-search"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">search</span>, </span></li>
+<li><span class="parameter" id="track-param-searchCat"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">searchCat</span>, </span></li>
+<li><span class="parameter" id="track-param-searchCount"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">searchCount</span>, </span></li>
+<li><span class="parameter" id="track-param-pvId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">pvId</span>, </span></li>
+<li><span class="parameter" id="track-param-idGoal"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idGoal</span>, </span></li>
+<li><span class="parameter" id="track-param-revenue"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">revenue</span>, </span></li>
+<li><span class="parameter" id="track-param-gtMs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">gtMs</span>, </span></li>
+<li><span class="parameter" id="track-param-cs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cs</span>, </span></li>
+<li><span class="parameter" id="track-param-ca"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">ca</span>, </span></li>
+<li><span class="parameter" id="track-param-pfNet"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfNet</span>, </span></li>
+<li><span class="parameter" id="track-param-pfSrv"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfSrv</span>, </span></li>
+<li><span class="parameter" id="track-param-pfTfr"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfTfr</span>, </span></li>
+<li><span class="parameter" id="track-param-pfDm1"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfDm1</span>, </span></li>
+<li><span class="parameter" id="track-param-pfDm2"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfDm2</span>, </span></li>
+<li><span class="parameter" id="track-param-pfOnl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">pfOnl</span>, </span></li>
+<li><span class="parameter" id="track-param-eC"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eC</span>, </span></li>
+<li><span class="parameter" id="track-param-eA"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eA</span>, </span></li>
+<li><span class="parameter" id="track-param-eN"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eN</span>, </span></li>
+<li><span class="parameter" id="track-param-eV"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/double-class.html">double</a>?</span> <span class="parameter-name">eV</span>, </span></li>
+<li><span class="parameter" id="track-param-cN"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cN</span>, </span></li>
+<li><span class="parameter" id="track-param-cP"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cP</span>, </span></li>
+<li><span class="parameter" id="track-param-cT"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cT</span>, </span></li>
+<li><span class="parameter" id="track-param-cId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cId</span>, </span></li>
+<li><span class="parameter" id="track-param-ecId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecId</span>, </span></li>
+<li><span class="parameter" id="track-param-ecItems"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecItems</span>, </span></li>
+<li><span class="parameter" id="track-param-ecSt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecSt</span>, </span></li>
+<li><span class="parameter" id="track-param-ecTx"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecTx</span>, </span></li>
+<li><span class="parameter" id="track-param-ecSh"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecSh</span>, </span></li>
+<li><span class="parameter" id="track-param-ecDt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">ecDt</span>, </span></li>
+<li><span class="parameter" id="track-param-ects"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">ects</span>, </span></li>
+<li><span class="parameter" id="track-param-cip"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">cip</span>, </span></li>
+<li><span class="parameter" id="track-param-cdt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/DateTime-class.html">DateTime</a>?</span> <span class="parameter-name">cdt</span>, </span></li>
+<li><span class="parameter" id="track-param-country"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">country</span>, </span></li>
+<li><span class="parameter" id="track-param-region"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">region</span>, </span></li>
+<li><span class="parameter" id="track-param-city"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">city</span>, </span></li>
+<li><span class="parameter" id="track-param-lat"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lat</span>, </span></li>
+<li><span class="parameter" id="track-param-long"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">long</span>, </span></li>
+<li><span class="parameter" id="track-param-maId"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maId</span>, </span></li>
+<li><span class="parameter" id="track-param-maRe"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maRe</span>, </span></li>
+<li><span class="parameter" id="track-param-maMt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maMt</span>, </span></li>
+<li><span class="parameter" id="track-param-maTi"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maTi</span>, </span></li>
+<li><span class="parameter" id="track-param-maPn"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maPn</span>, </span></li>
+<li><span class="parameter" id="track-param-maSt"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maSt</span>, </span></li>
+<li><span class="parameter" id="track-param-maLe"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maLe</span>, </span></li>
+<li><span class="parameter" id="track-param-maPs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maPs</span>, </span></li>
+<li><span class="parameter" id="track-param-maTtp"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maTtp</span>, </span></li>
+<li><span class="parameter" id="track-param-maW"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maW</span>, </span></li>
+<li><span class="parameter" id="track-param-maH"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a>?</span> <span class="parameter-name">maH</span>, </span></li>
+<li><span class="parameter" id="track-param-maFs"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">maFs</span>, </span></li>
+<li><span class="parameter" id="track-param-maSe"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">maSe</span>, </span></li>
+<li><span class="parameter" id="track-param-customData"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">customData</span>}</span></li>
+</ol>)
+
+      
+
+    </section>
+    
+<section class="desc markdown">
+  <p><a href="../../matomo_forever/MatomoForever/track.html">track</a> Sends or bulks the tracking of an action to Matomo server.</p>
+<p><code>actionName</code> The title of the action being tracked. It is possible to use
+slashes / to set one or several categories for this action. For example,
+Help / Feedback will create the Action Feedback in the category Help.</p>
+<p><code>url</code> The full URL for the current action.</p>
+<p><code>rand</code> Meant to hold a random value that is generated before each request.
+Using it helps avoid the tracking request being cached by the browser or a
+proxy.</p>
+<p><code>urlRef</code> The full HTTP Referrer URL. This value is used to determine how
+someone got to your website (ie, through a website, search engine or
+campaign).</p>
+<p><code>cvar</code> Visit or page scope custom variables. This is a JSON encoded string
+of the custom variable array (see
+<a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a> ).</p>
+<p><code>idVc</code> The current count of visits for this visitor. To set this value
+correctly, it would be required to store the value for each visitor in
+your application (using sessions or persisting in a database). Then you
+would manually increment the counts by one on each new visit or session,
+depending on how you choose to define a visit. This value is used to
+populate the report Visitors &gt; Engagement &gt; Visits by visit number.</p>
+<p><code>viewTs</code> The UNIX timestamp of this visitor's previous visit. This
+parameter is used to populate the report Visitors &gt; Engagement &gt; Visits by
+days since last visit.</p>
+<p><code>idTs</code> The UNIX timestamp of this visitor's first visit. This could be set
+to the date where the user first started using your software/app, or when
+he/she created an account. This parameter is used to populate the Goals &gt;
+Days to Conversion report.</p>
+<p><code>rcn</code> The Campaign name (see Tracking Campaigns). Used to populate the
+Referrers &gt; Campaigns report. Note: this parameter will only be used for
+the first pageview of a visit.</p>
+<p><code>rck</code> The Campaign Keyword (see Tracking Campaigns). Used to populate the
+Referrers &gt; Campaigns report (clicking on a campaign loads all keywords
+for this campaign). Note: this parameter will only be used for the first
+pageview of a visit.</p>
+<p><code>res</code> The resolution of the device the visitor is using, eg 1280x1024.</p>
+<p><code>h</code> The current hour (local time).</p>
+<p><code>m</code> The current minute (local time).</p>
+<p><code>s</code> The current second (local time).</p>
+<p><code>fla</code> Flash plugin</p>
+<p><code>java</code> Java plugin</p>
+<p><code>dir</code> Director plugin</p>
+<p><code>qt</code> Quicktime plugin</p>
+<p><code>realp</code> Real Player plugin</p>
+<p><code>pdf</code> PDF plugin</p>
+<p><code>wma</code> Windows Media plugin</p>
+<p><code>gears</code> Gears plugin</p>
+<p><code>ag</code> Silverlight plugin</p>
+<p><code>cookie</code> when set to 1, the visitor's client is known to support cookies.</p>
+<p><code>ua</code> An override value for the User-Agent HTTP header field. The user
+agent is used to detect the operating system and browser used.</p>
+<p><code>lang</code> An override value for the Accept-Language HTTP header field. This
+value is used to detect the visitor's country if GeoIP is not enabled.</p>
+<p><code>uid</code> defines the User ID for this request. User ID is any non-empty
+unique string identifying the user (such as an email address or an
+username). To access this value, users must be logged-in in your system so
+you can fetch this user ID from your system, and pass it to Matomo. The
+User ID appears in the visits log, the Visitor profile, and you can
+Segment reports for one or several User ID (userId segment). When
+specified, the User ID will be enforced. This means that if there is no
+recent visit with this User ID, a new one will be created. If a visit is
+found in the last 30 minutes with your specified User ID, then the new
+action will be recorded to this existing visit.</p>
+<p><code>cid</code> defines the visitor ID for this request. You must set this value to
+exactly a 16 character hexadecimal string (containing only characters
+01234567890abcdefABCDEF). We recommended setting the User ID via uid
+rather than use this cid.</p>
+<p><code>newVisit</code> If set to 1, will force a new visit to be created for this
+action. This feature is also available in JavaScript.</p>
+<p><code>dimension0</code> 0-999 A Custom Dimension value for a specific Custom
+Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the
+Custom Dimensions guide). If Custom Dimension ID is 2 use
+dimension2=dimensionValue to send a value for this dimension. The
+configured Custom Dimension has to be in scope Visit for user or Action.</p>
+<p><code>dimension1</code></p>
+<p><code>dimension2</code></p>
+<p><code>dimension3</code></p>
+<p><code>dimension4</code></p>
+<p><code>dimension5</code></p>
+<p><code>dimension6</code></p>
+<p><code>dimension7</code></p>
+<p><code>dimension8</code></p>
+<p><code>dimension9</code></p>
+<p><code>dimension10</code></p>
+<p><code>link</code> An external URL the user has opened. Used for tracking outlink
+clicks. We recommend to also set the url parameter to this same value.</p>
+<p><code>download</code> URL of a file the user has downloaded. Used for tracking
+downloads. We recommend to also set the url parameter to this same value.</p>
+<p><code>search</code> The Site Search keyword. When specified, the request will not be
+tracked as a normal pageview but will instead be tracked as a Site Search
+request.</p>
+<p><code>searchCat</code> when search is specified, you can optionally specify a search
+category with this parameter.</p>
+<p><code>searchCount</code> when search is specified, we also recommend setting the
+search_count to the number of search results displayed on the results
+page. When keywords are tracked with &amp;search_count=0 they will appear in
+the No Result Search Keyword report.</p>
+<p><code>pvId</code> Accepts a six character unique ID that identifies which actions
+were performed on a specific page view. When a page was viewed, all
+following tracking requests (such as events) during that page view should
+use the same pageview ID. Once another page was viewed a new unique ID
+should be generated. Use 0-9a-Z as possible characters for the unique
+ID.</p>
+<p><code>idGoal</code> If specified, the tracking request will trigger a conversion for
+the goal of the website being tracked with this ID.</p>
+<p><code>revenue</code> A monetary value that was generated as revenue by this goal
+conversion. Only used if idgoal is specified in the request. Can also be
+the grand total for the ecommerce order (required when tracking an
+ecommerce order).</p>
+<p><code>gtMs</code> The amount of time it took the server to generate this action, in
+milliseconds. This value is used to process the Page speed report Avg.
+generation time column in the Page URL and Page Title reports, as well as
+a site wide running average of the speed of your server. Note: when using
+the JavaScript tracker this value is set to the time for server to
+generate response + the time for client to download response.</p>
+<p><code>cs</code> The charset of the page being tracked. Specify the charset if the
+data you send to Matomo is encoded in a different character set than the
+default utf-8.</p>
+<p><code>ca</code> Stands for custom action. &amp;ca=1 can be optionally sent along any
+tracking request that isn't a page view. For example it can be sent
+together with an event tracking request e_a=Action&amp;e_c=Category&amp;ca=1. The
+advantage being that should you ever disable the event plugin, then the
+event tracking requests will be ignored vs if the parameter is not set, a
+page view would be tracked even though it isn't a page view. For more
+background information check out #16570. Do not use this parameter
+together with a ping=1 tracking request.</p>
+<p><code>pfNet</code> (milliseconds) Network time. How long it took to connect to
+server.</p>
+<p><code>pfSrv</code> (milliseconds) Server time. How long it took the server to
+generate page.</p>
+<p><code>pfTfr</code> (milliseconds) Transfer time. How long it takes the browser to
+download the response from the server</p>
+<p><code>pfDm1</code> (milliseconds) Dom processing time. How long the browser spends
+loading the webpage after the response was fully received until the user
+can starting interacting with it.</p>
+<p><code>pfDm2</code> (milliseconds) Dom completion time. How long it takes for the
+browser to load media and execute any Javascript code listening for the
+DOMContentLoaded event.</p>
+<p><code>pfOnl</code> (milliseconds) Onload time. How long it takes the browser to
+execute Javascript code waiting for the window.load event.</p>
+<p><code>eC</code> The event category. Must not be empty. (eg. Videos, Music, Games...)</p>
+<p><code>eA</code> The event action. Must not be empty. (eg. Play, Pause, Duration, Add
+Playlist, Downloaded, Clicked...)</p>
+<p><code>eN</code> The event name. (eg. a Movie name, or Song name, or File name...)</p>
+<p><code>eV</code> The event value. Must be a float or integer value (numeric), not a
+string.</p>
+<p><code>cN</code> The name of the content. For instance 'Ad Foo Bar'. Required for
+content tracking.</p>
+<p><code>cP</code> The actual content piece. For instance the path to an image, video,
+audio, any text</p>
+<p><code>cT</code> The target of the content. For instance the URL of a landing page</p>
+<p><code>cId</code> The name of the interaction with the content. For instance a 'click'</p>
+<p><code>ecId</code> The unique string identifier for the ecommerce order (required when
+tracking an ecommerce order). Must set idgoal=0.</p>
+<p><code>ecItems</code> Items in the Ecommerce order. This is a JSON encoded array of
+items. Each item is an array with the following info in this order:
+item sku (required),
+item name (or if not applicable, set it to an empty string),
+item category (or if not applicable, set it to an empty string),
+item price (or if not applicable, set it to 0),
+item quantity (or if not applicable, set it to 1).
+An example value of ec_items would be:
+%5B%5B%22item1%20SKU%22%2C%22item1%20name%22%2C%22item1%20category%22%2C11
+.1111%2C2%5D%2C%5B%22item2%20SKU%22%2C%22item2%20name%22%2C%22%22%2C0%2C1
+%5D%5D (URL decoded version is: [[item1 SKU,item1 name,item1 category,11
+.1111,2],[item2 SKU,item2 name,,0,1]]).</p>
+<p><code>ecSt</code> The sub total of the order; excludes shipping.</p>
+<p><code>ecTx</code> Tax Amount of the order</p>
+<p><code>ecSh</code> Shipping cost of the Order</p>
+<p><code>ecDt</code> Discount offered</p>
+<p><code>ects</code> The UNIX timestamp of this customer's last ecommerce order. This
+value is used to process the Days since last order report.</p>
+<p><code>cip</code> Override value for the visitor IP (both IPv4 and IPv6 notations
+supported).</p>
+<p><code>cdt</code> Override for the datetime of the request (normally the current time
+is used). This can be used to record visits and page views in the past.
+The expected format is either a datetime such as: 2011-04-05 00:11:42
+(remember to URL encode the value!), or a valid UNIX timestamp such as
+1301919102. The datetime must be sent in UTC timezone. Note: if you record
+data in the past, you will need to force Matomo to re-process reports for
+the past dates. If you set cdt to a datetime older than 24 hours then
+token_auth must be set. If you set cdt with a datetime in the last 24
+hours then you don't need to pass token_auth.</p>
+<p><code>country</code> An override value for the country. Should be set to the two
+letter country code of the visitor (lowercase), eg fr, de, us.</p>
+<p><code>region</code> An override value for the region. Should be set to a ISO 3166-2
+region code, which are used by MaxMind's and DB-IP's GeoIP2 databases. See
+here for a list of them for every country.</p>
+<p><code>city</code> An override value for the city. The name of the city the visitor is
+located in, eg, Tokyo.</p>
+<p><code>lat</code> An override value for the visitor's latitude, eg 22.456.</p>
+<p><code>long</code> An override value for the visitor's longitude, eg 22.456.</p>
+<p><code>maId</code> (required) A unique id that is always the same while playing a
+media. As soon as the played media changes (new video or audio started),
+this ID has to change.</p>
+<p><code>maRe</code> (required) The URL of the media resource.</p>
+<p><code>maMt</code> (required) video or audio depending on the type of the media.</p>
+<p><code>maTi</code> The name / title of the media.</p>
+<p><code>maPn</code> The name of the media player, for example html5.</p>
+<p><code>maSt</code> The time in seconds for how long a user has been playing this
+media. This number should typically increase when you send a media
+tracking request. It should be 0 if the media was only visible/impressed
+but not played. Do not increase this number when a media is paused.</p>
+<p><code>maLe</code> The duration (the length) of the media in seconds. For example if a
+video is 90 seconds long, the value should be 90.</p>
+<p><code>maPs</code> The progress / current position within the media. Defines basically
+at which position within the total length the user is currently playing.</p>
+<p><code>maTtp</code> Defines after how many seconds the user has started playing this
+media. For example a user might have seen the poster of the video for 30
+seconds before a user actually pressed the play button.</p>
+<p><code>maW</code> The resolution width of the media in pixels. Only recommended being
+set for videos.</p>
+<p><code>maH</code> The resolution height of the media in pixels. Only recommended being
+set for videos.</p>
+<p><code>maFs</code> Should be 0 or 1 and defines whether the media is currently viewed
+in full screen. Only recommended being set for videos.</p>
+<p><code>maSe</code> An optional comma separated list of which positions within a media
+a user has played. For example if the user has viewed position 5s, 10s,
+15s and 35s, then you would need to send 5,10,15,35. We recommend to round
+to the next 5 seconds and not send a value for each second. Internally,
+Matomo may round to the next 15 or 30 seconds. For performance
+optimisation we recommend not sending the same position twice. Meaning if
+you have sent ma_se=10 there is no need to send later ma_se=10,20 but
+instead only ma_se=20.</p>
+<p><code>customData</code> Additional data to send to the Matomo server.</p>
+</section>
+
+
+    
+<section class="summary source-code" id="source">
+  <h2><span>Implementation</span></h2>
+  <pre class="language-dart"><code class="language-dart">static Future&lt;bool&gt; track(
+  String actionName, {
+  String? url,
+  String? rand,
+  String? urlRef,
+  String? cvar,
+  int? idVc,
+  DateTime? viewTs,
+  DateTime? idTs,
+  String? rcn,
+  String? rck,
+  String? res,
+  int? h,
+  int? m,
+  int? s,
+  bool? fla,
+  bool? java,
+  bool? dir,
+  bool? qt,
+  bool? realp,
+  bool? pdf,
+  bool? wma,
+  bool? gears,
+  bool? ag,
+  bool? cookie,
+  String? ua,
+  String? lang,
+  String? uid,
+  String? cid,
+  bool? newVisit,
+  String? dimension0,
+  String? dimension1,
+  String? dimension2,
+  String? dimension3,
+  String? dimension4,
+  String? dimension5,
+  String? dimension6,
+  String? dimension7,
+  String? dimension8,
+  String? dimension9,
+  String? dimension10,
+  String? link,
+  String? download,
+  String? search,
+  String? searchCat,
+  int? searchCount,
+  String? pvId,
+  String? idGoal,
+  String? revenue,
+  int? gtMs,
+  String? cs,
+  bool? ca,
+  int? pfNet,
+  int? pfSrv,
+  int? pfTfr,
+  int? pfDm1,
+  int? pfDm2,
+  int? pfOnl,
+  String? eC,
+  String? eA,
+  String? eN,
+  double? eV,
+  String? cN,
+  String? cP,
+  String? cT,
+  String? cId,
+  String? ecId,
+  String? ecItems,
+  String? ecSt,
+  String? ecTx,
+  String? ecSh,
+  String? ecDt,
+  DateTime? ects,
+  String? cip,
+  DateTime? cdt,
+  String? country,
+  String? region,
+  String? city,
+  String? lat,
+  String? long,
+  String? maId,
+  String? maRe,
+  String? maMt,
+  String? maTi,
+  String? maPn,
+  int? maSt,
+  int? maLe,
+  int? maPs,
+  int? maTtp,
+  int? maW,
+  int? maH,
+  bool? maFs,
+  String? maSe,
+  Map&lt;String, String&gt;? customData,
+}) async {
+  Map&lt;String, String&gt; addedData = {&quot;action_name&quot;: actionName};
+  addedData.addIfVAndNew(&quot;url&quot;, url);
+  addedData.addIfVAndNew(&quot;rand&quot;, rand);
+  addedData.addIfVAndNew(&#39;urlref&#39;, urlRef);
+  addedData.addIfVAndNew(&#39;_cvar&#39;, cvar);
+  addedData.addIfVAndNew(&#39;_idvc&#39;, idVc?.toString());
+  addedData.addIfVAndNew(
+      &#39;_viewts&#39;, viewTs?.millisecondsSinceEpoch.toString());
+  addedData.addIfVAndNew(&#39;_idts&#39;, idTs?.millisecondsSinceEpoch.toString());
+  addedData.addIfVAndNew(&#39;_rcn&#39;, rcn);
+  addedData.addIfVAndNew(&#39;_rck&#39;, rck);
+  addedData.addIfVAndNew(&#39;res&#39;, res);
+  addedData.addIfVAndNew(&#39;h&#39;, h?.toString());
+  addedData.addIfVAndNew(&#39;m&#39;, m?.toString());
+  addedData.addIfVAndNew(&#39;s&#39;, s?.toString());
+  addedData.addIfVAndNew(
+      &#39;fla&#39;,
+      fla != null
+          ? fla
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;java&#39;,
+      java != null
+          ? java
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;dir&#39;,
+      dir != null
+          ? dir
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;qt&#39;,
+      qt != null
+          ? qt
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;realp&#39;,
+      realp != null
+          ? realp
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;pdf&#39;,
+      pdf != null
+          ? pdf
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;wma&#39;,
+      wma != null
+          ? wma
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;gears&#39;,
+      gears != null
+          ? gears
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;ag&#39;,
+      ag != null
+          ? ag
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(
+      &#39;cookie&#39;,
+      cookie != null
+          ? cookie
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(&#39;ua&#39;, ua);
+  addedData.addIfVAndNew(&#39;lang&#39;, lang);
+  addedData.addIfVAndNew(&#39;uid&#39;, uid);
+  addedData.addIfVAndNew(&#39;cid&#39;, cid);
+  addedData.addIfVAndNew(
+      &#39;new_visit&#39;,
+      newVisit != null
+          ? newVisit
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(&#39;dimension0&#39;, dimension0);
+  addedData.addIfVAndNew(&#39;dimension1&#39;, dimension1);
+  addedData.addIfVAndNew(&#39;dimension2&#39;, dimension2);
+  addedData.addIfVAndNew(&#39;dimension3&#39;, dimension3);
+  addedData.addIfVAndNew(&#39;dimension4&#39;, dimension4);
+  addedData.addIfVAndNew(&#39;dimension5&#39;, dimension5);
+  addedData.addIfVAndNew(&#39;dimension6&#39;, dimension6);
+  addedData.addIfVAndNew(&#39;dimension7&#39;, dimension7);
+  addedData.addIfVAndNew(&#39;dimension8&#39;, dimension8);
+  addedData.addIfVAndNew(&#39;dimension9&#39;, dimension9);
+  addedData.addIfVAndNew(&#39;dimension10&#39;, dimension10);
+  addedData.addIfVAndNew(&#39;link&#39;, link);
+  addedData.addIfVAndNew(&#39;download&#39;, download);
+  addedData.addIfVAndNew(&#39;search&#39;, search);
+  addedData.addIfVAndNew(&#39;search_cat&#39;, searchCat);
+  addedData.addIfVAndNew(&#39;search_count&#39;, searchCount?.toString());
+  addedData.addIfVAndNew(&#39;pv_id&#39;, pvId);
+  addedData.addIfVAndNew(&#39;idgoal&#39;, idGoal);
+  addedData.addIfVAndNew(&#39;revenue&#39;, revenue);
+  addedData.addIfVAndNew(&#39;gt_ms&#39;, gtMs?.toString());
+  addedData.addIfVAndNew(&#39;cs&#39;, cs);
+  addedData.addIfVAndNew(
+      &#39;ca&#39;,
+      ca != null
+          ? ca
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(&#39;pf_net&#39;, pfNet?.toString());
+  addedData.addIfVAndNew(&#39;pf_srv&#39;, pfSrv?.toString());
+  addedData.addIfVAndNew(&#39;pf_tfr&#39;, pfTfr?.toString());
+  addedData.addIfVAndNew(&#39;pf_dm1&#39;, pfDm1?.toString());
+  addedData.addIfVAndNew(&#39;pf_dm2&#39;, pfDm2?.toString());
+  addedData.addIfVAndNew(&#39;pf_onl&#39;, pfOnl?.toString());
+  addedData.addIfVAndNew(&#39;e_c&#39;, eC);
+  addedData.addIfVAndNew(&#39;e_a&#39;, eA);
+  addedData.addIfVAndNew(&#39;e_n&#39;, eN);
+  addedData.addIfVAndNew(&#39;e_v&#39;, eV?.toString());
+  addedData.addIfVAndNew(&#39;c_n&#39;, cN);
+  addedData.addIfVAndNew(&#39;c_p&#39;, cP);
+  addedData.addIfVAndNew(&#39;c_t&#39;, cT);
+  addedData.addIfVAndNew(&#39;c_i&#39;, cId);
+  addedData.addIfVAndNew(&#39;ec_id&#39;, ecId);
+  addedData.addIfVAndNew(&#39;ec_items&#39;, ecItems);
+  addedData.addIfVAndNew(&#39;ec_st&#39;, ecSt);
+  addedData.addIfVAndNew(&#39;ec_tx&#39;, ecTx);
+  addedData.addIfVAndNew(&#39;ec_sh&#39;, ecSh);
+  addedData.addIfVAndNew(&#39;ec_dt&#39;, ecDt);
+  addedData.addIfVAndNew(&#39;_ects&#39;, ects?.millisecondsSinceEpoch.toString());
+  addedData.addIfVAndNew(&#39;cip&#39;, cip);
+  addedData.addIfVAndNew(&#39;cdt&#39;, cdt?.millisecondsSinceEpoch.toString());
+  addedData.addIfVAndNew(&#39;country&#39;, country);
+  addedData.addIfVAndNew(&#39;region&#39;, region);
+  addedData.addIfVAndNew(&#39;city&#39;, city);
+  addedData.addIfVAndNew(&#39;lat&#39;, lat);
+  addedData.addIfVAndNew(&#39;long&#39;, long);
+  addedData.addIfVAndNew(&#39;ma_id&#39;, maId);
+  addedData.addIfVAndNew(&#39;ma_re&#39;, maRe);
+  addedData.addIfVAndNew(&#39;ma_mt&#39;, maMt);
+  addedData.addIfVAndNew(&#39;ma_ti&#39;, maTi);
+  addedData.addIfVAndNew(&#39;ma_pn&#39;, maPn);
+  addedData.addIfVAndNew(&#39;ma_st&#39;, maSt?.toString());
+  addedData.addIfVAndNew(&#39;ma_le&#39;, maLe?.toString());
+  addedData.addIfVAndNew(&#39;ma_ps&#39;, maPs?.toString());
+  addedData.addIfVAndNew(&#39;ma_ttp&#39;, maTtp?.toString());
+  addedData.addIfVAndNew(&#39;ma_w&#39;, maW?.toString());
+  addedData.addIfVAndNew(&#39;ma_h&#39;, maH?.toString());
+  addedData.addIfVAndNew(
+      &#39;ma_fs&#39;,
+      maFs != null
+          ? maFs
+              ? &#39;1&#39;
+              : &#39;0&#39;
+          : null);
+  addedData.addIfVAndNew(&#39;ma_se&#39;, maSe);
+  if (customData != null) {
+    addedData.addAll(customData);
+  }
+  return (await MatomoForever.sendDataOrBulk(addedData));
+}</code></pre>
+</section>
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="../../index.html">matomo_forever</a></li>
+  <li><a href="../../matomo_forever/matomo_forever-library.html">matomo_forever</a></li>
+  <li><a href="../../matomo_forever/MatomoForever-class.html">MatomoForever</a></li>
+  <li class="self-crumb">track method</li>
+</ol>
+
+
+    <h5>MatomoForever class</h5>
+    <ol>
+
+    <li class="section-title"><a href="../../matomo_forever/MatomoForever-class.html#constructors">Constructors</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/MatomoForever.html">MatomoForever</a></li>
+
+
+    <li class="section-title">
+      <a href="../../matomo_forever/MatomoForever-class.html#instance-properties">Properties</a>
+    </li>
+    <li><a href="../../matomo_forever/MatomoForever/apiV.html">apiV</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/bots.html">bots</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/bulkSize.html">bulkSize</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/debug.html">debug</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/headers.html">headers</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/id.html">id</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/idSite.html">idSite</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/method.html">method</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/persistentParameters.html">persistentParameters</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/ping.html">ping</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/queuedTracking.html">queuedTracking</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/rec.html">rec</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/sendImage.html">sendImage</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/sendThroughGetMethod.html">sendThroughGetMethod</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/sendThroughPostMethod.html">sendThroughPostMethod</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/siteUrl.html">siteUrl</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a></li>
+
+    <li class="section-title"><a href="../../matomo_forever/MatomoForever-class.html#instance-methods">Methods</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+
+    <li class="section-title inherited"><a href="../../matomo_forever/MatomoForever-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+    <li class="section-title"><a href="../../matomo_forever/MatomoForever-class.html#static-properties">Static properties</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/isInitialized.html">isInitialized</a></li>
+
+    <li class="section-title"><a href="../../matomo_forever/MatomoForever-class.html#static-methods">Static methods</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/init.html">init</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/sendDataOrBulk.html">sendDataOrBulk</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/sendQueue.html">sendQueue</a></li>
+    <li><a href="../../matomo_forever/MatomoForever/track.html">track</a></li>
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    matomo_forever
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="../../static-assets/highlight.pack.js?v1"></script>
+<script src="../../static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+

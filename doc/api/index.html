@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="generator" content="made with love by dartdoc 2.0.0">
+  <meta name="description" content="matomo_forever API docs, for the Dart programming language.">
+  <title>matomo_forever - Dart API docs</title>
+
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
+  <link rel="stylesheet" href="static-assets/github.css?v1">
+  <link rel="stylesheet" href="static-assets/styles.css?v1">
+  <link rel="icon" href="static-assets/favicon.png?v1">
+
+  
+</head>
+
+
+<body data-base-href=""
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="https://github.com/lcuis/matomo_forever">matomo_forever package</a></li>
+  </ol>
+  <div class="self-name">matomo_forever</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+
+  <div id="dartdoc-main-content" class="main-content">
+      
+<section class="desc markdown">
+  <h1 id="matomo_forever">matomo_forever</h1>
+<p>A perennial Dart plugin to send data to a Matomo server with a Flutter example app.</p>
+<p>This plugin is based on the <a href="https://developer.matomo.org/api-reference/tracking-api">Matomo HTTP tracking API documentation</a>.</p>
+<h1 id="why-matomo_forever">Why <code>matomo_forever</code>?</h1>
+<p><a href="https://matomo.org">Matomo</a> is a free, open source, complete, reliable, stable and flexible solution to collect and analyze app and web usages.
+This can be achieved through a Matomo cloud solution (paid) or through a server on premises.</p>
+<p>At the time those lines are written, 2 plugins are proposed on pub.dev for Matomo. They both suffered the following:</p>
+<ul>
+<li>Only work on iOS and Android.</li>
+<li>Lead me to malfunctions even on iOS and/or Android.</li>
+<li>Not flexible enough.</li>
+</ul>
+<p>matomo_forever has a simpler implementation that provides higher flexibility and sustainability.
+For example, it supports:</p>
+<ul>
+<li>All the fields described in the <a href="https://developer.matomo.org/api-reference/tracking-api">Matomo API</a>.</li>
+<li>Setting custom HTTP headers.</li>
+<li>Sending in bulks.</li>
+</ul>
+<h2 id="platforms">Platforms</h2>
+<p>This plugin has been successfully tested on <em>Android</em>, <em>Linux</em> and <em>Chrome</em>. It is expected to work fine on <em>iOS</em>, <em>MacOS</em> and <em>Windows</em>.</p>
+<h2 id="examples">Examples</h2>
+<p>An example project app is included in the main project under the <code>example</code> folder.
+This example app is a good way to interact with a Matomo server as a client.</p>
+<h3 id="code">Code</h3>
+<h4 id="plugin-usage">Plugin usage</h4>
+<p>Add to your <code>pubspec.yaml</code> in the <code>dependencies</code> section:</p>
+<pre class="language-dart"><code>  matomo_forever:
+</code></pre>
+<p>Get packages with command:</p>
+<pre class="language-dart"><code>flutter packages get
+</code></pre>
+<p>Import:</p>
+<pre class="language-dart"><code class="language-dart">import 'package:matomo_forever/matomo_forever.dart';
+</code></pre>
+<h5 id="init">Init</h5>
+<p>Call the <code>init</code> static method to initialize the plugin:</p>
+<pre class="language-dart"><code class="language-dart">MatomoForever.init(
+        siteUrl,
+        idSite,
+        id: id,
+        apiV: apiV,
+        rec: rec,
+        method: MatomoForeverMethod.post,
+        bulkSize: bulkSize,
+        tokenAuth: tokenAuth,
+        headers: headers,
+        persistentParameters: persistentParameters,
+      );
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>siteUrl (Mandatory) The Matomo or piwik URL such as <a href="https://matomo.example.com/matomo.php">https://matomo.example.com/matomo.php</a></li>
+<li>idSite (Madatory) The ID of the website we're tracking a visit/action for.</li>
+<li>id The unique visitor ID, must be a 16 characters hexadecimal string. Every unique visitor must be assigned a different ID and this ID must not change after it is assigned. If this value is not set Matomo (formerly Piwik) will still track visits, but the unique visitors metric might be less accurate. Corresponds to _id in <a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a></li>
+<li>apiV The parameter &amp;apiv=1 defines the api version to use (currently always set to 1)</li>
+<li>rec Required for tracking, must be set to true.</li>
+<li>method Can be either post or get except for bulk sending which must be sent through post method.</li>
+<li>bulkSize Max size the local queue can reach before sending the bulk of requests. If &lt;= 0, no bulk mechanism. requests are sent straight away. Bulk sending requires tokenAuth to be set.</li>
+<li>tokenAuth 32 character authorization key used to authenticate the API request. We recommend to create a user specifically for accessing the Tracking API, and give the user only write permission on the website(s).</li>
+<li>queuedTracking When set to false (0), the queued tracking handler won't be used and instead the tracking request will be executed directly. This can be useful when you need to debug a tracking problem or want to test that the tracking works in general.</li>
+<li>sendImage If set to false (send_image=0) Matomo will respond with HTTP 204 response code instead of a GIF image. This improves performance and can fix errors if images are not allowed to be obtained directly (eg Chrome Apps). Available since Matomo 2.10.0</li>
+<li>ping If set to true (ping=1), the request will be a Heartbeat request which will not track any new activity (such as a new visit, new action or new goal). The heartbeat request will only update the visit's total time to provide accurate "Visit duration" metric when this parameter is set. It won't record any other data. This means by sending an additional tracking request when the user leaves your site or app with ping set to true (&amp;ping=1), you fix the issue where the time spent of the last page visited is reported as 0 seconds.</li>
+<li>bots By default Matomo does not track bots. If you use the Tracking HTTP API directly, you may be interested in tracking bot requests. To enable Bot Tracking in Matomo, set the parameter bots to true (&amp;bots=1) in your requests to matomo.php.</li>
+<li>debug If Matomo server is configured with debug_on_demand = 1, debug can be set to true (1)</li>
+<li>headers The headers to be sent along with request.</li>
+<li>persistentParameters Custom parameters sent at each call. Refer to: <a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a></li>
+<li>sendThroughGetMethod Function used to send the data to the server. There is a fallback in case it is not initialized through the init call. Returns true for success. Receives the following parameters: urlWithoutParameters The matomo.php URL without the parameters. urlParameters The parameters String formatted for a GET request. headers The headers to be sent along with request.</li>
+<li>sendThroughPostMethod Function used to send the data to the server. There is a fallback in case it is not initialized through the init call. Returns true for success. Receives the following parameters: urlWithoutParameters The matomo.php URL without the parameters. data The parameters to be sent by post. headers The headers to be sent along with request.</li>
+</ul>
+<h5 id="track">Track</h5>
+<p>Track calling the <code>track</code> static method:</p>
+<pre class="language-dart"><code class="language-dart">bool result = await MatomoForever.track(
+    actionName,
+    url: url,
+    rand: rand,
+    urlRef: urlRef,
+    cvar: cvar,
+    idVc: idVc,
+    viewTs: viewTs,
+    idTs: idTs,
+    rcn: rcn,
+    rck: rck,
+    res: res,
+    h: h,
+    m: m,
+    s: s,
+    fla: fla,
+    java: java,
+    dir: dir,
+    qt: qt,
+    realp: realp,
+    pdf: pdf,
+    wma: wma,
+    gears: gears,
+    ag: ag,
+    cookie: cookie,
+    ua: ua,
+    lang: lang,
+    uid: uid,
+    cid: cid,
+    newVisit: newVisit,
+    dimension0: dimension0,
+    dimension1: dimension1,
+    dimension2: dimension2,
+    dimension3: dimension3,
+    dimension4: dimension4,
+    dimension5: dimension5,
+    dimension6: dimension6,
+    dimension7: dimension7,
+    dimension8: dimension8,
+    dimension9: dimension9,
+    dimension10: dimension10,
+    link: link,
+    download: download,
+    search: search,
+    searchCat: searchCat,
+    searchCount: searchCount,
+    pvId: pvId,
+    idGoal: idGoal,
+    revenue: revenue,
+    gtMs: gtMs,
+    cs: cs,
+    ca: ca,
+    pfNet: pfNet,
+    pfSrv: pfSrv,
+    pfTfr: pfTfr,
+    pfDm1: pfDm1,
+    pfDm2: pfDm2,
+    pfOnl: pfOnl,
+    eC: eC,
+    eA: eA,
+    eN: eN,
+    eV: eV,
+    cN: cN,
+    cP: cP,
+    cT: cT,
+    cId: cId,
+    ecId: ecId,
+    ecItems: ecItems,
+    ecSt: ecSt,
+    ecTx: ecTx,
+    ecSh: ecSh,
+    ecDt: ecDt,
+    ects: ects,
+    cip: cip,
+    cdt: cdt,
+    country: country,
+    region: region,
+    city: city,
+    lat: lat,
+    long: long,
+    maId: maId,
+    maRe: maRe,
+    maMt: maMt,
+    maTi: maTi,
+    maPn: maPn,
+    maSt: maSt,
+    maLe: maLe,
+    maPs: maPs,
+    maTtp: maTtp,
+    maW: maW,
+    maH: maH,
+    maFs: maFs,
+    maSe: maSe,
+    customData: customData,
+);
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>actionName The title of the action being tracked. It is possible to use slashes / to set one or several categories for this action. For example, Help / Feedback will create the Action Feedback in the category Help.</li>
+<li>url The full URL for the current action.</li>
+<li>rand Meant to hold a random value that is generated before each request. Using it helps avoid the tracking request being cached by the browser or a proxy.</li>
+<li>urlRef The full HTTP Referrer URL. This value is used to determine how someone got to your website (ie, through a website, search engine or campaign).</li>
+<li>cvar Visit or page scope custom variables. This is a JSON encoded string of the custom variable array (see <a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a> ).</li>
+<li>idVc The current count of visits for this visitor. To set this value correctly, it would be required to store the value for each visitor in your application (using sessions or persisting in a database). Then you would manually increment the counts by one on each new visit or "session", depending on how you choose to define a visit. This value is used to populate the report Visitors &gt; Engagement &gt; Visits by visit number.</li>
+<li>viewTs The UNIX timestamp of this visitor's previous visit. This parameter is used to populate the report Visitors &gt; Engagement &gt; Visits by days since last visit.</li>
+<li>idTs The UNIX timestamp of this visitor's first visit. This could be set to the date where the user first started using your software/app, or when he/she created an account. This parameter is used to populate the Goals &gt; Days to Conversion report.</li>
+<li>rcn The Campaign name (see Tracking Campaigns). Used to populate the Referrers &gt; Campaigns report. Note: this parameter will only be used for the first pageview of a visit.</li>
+<li>rck The Campaign Keyword (see Tracking Campaigns). Used to populate the Referrers &gt; Campaigns report (clicking on a campaign loads all keywords for this campaign). Note: this parameter will only be used for the first pageview of a visit.</li>
+<li>res The resolution of the device the visitor is using, eg 1280x1024.</li>
+<li>h The current hour (local time).</li>
+<li>m The current minute (local time).</li>
+<li>s The current second (local time).</li>
+<li>fla Flash plugin</li>
+<li>java Java plugin</li>
+<li>dir Director plugin</li>
+<li>qt Quicktime plugin</li>
+<li>realp Real Player plugin</li>
+<li>pdf PDF plugin</li>
+<li>wma Windows Media plugin</li>
+<li>gears Gears plugin</li>
+<li>ag Silverlight plugin</li>
+<li>cookie when set to 1, the visitor's client is known to support cookies.</li>
+<li>ua An override value for the User-Agent HTTP header field. The user agent is used to detect the operating system and browser used.</li>
+<li>lang An override value for the Accept-Language HTTP header field. This value is used to detect the visitor's country if GeoIP is not enabled.</li>
+<li>uid defines the User ID for this request. User ID is any non-empty unique string identifying the user (such as an email address or an username). To access this value, users must be logged-in in your system so you can fetch this user ID from your system, and pass it to Matomo. The User ID appears in the visits log, the Visitor profile, and you can Segment reports for one or several User ID (userId segment). When specified, the User ID will be "enforced". This means that if there is no recent visit with this User ID, a new one will be created. If a visit is found in the last 30 minutes with your specified User ID, then the new action will be recorded to this existing visit.</li>
+<li>cid defines the visitor ID for this request. You must set this value to exactly a 16 character hexadecimal string (containing only characters 01234567890abcdefABCDEF). We recommended setting the User ID via uid rather than use this cid.</li>
+<li>newVisit If set to 1, will force a new visit to be created for this action. This feature is also available in JavaScript.</li>
+<li>dimension0 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension1 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension2 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension3 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension4 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension5 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension6 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension7 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension8 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension9 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>dimension10 0-999 A Custom Dimension value for a specific Custom Dimension ID (requires Matomo 2.15.1 + Custom Dimensions plugin see the Custom Dimensions guide). If Custom Dimension ID is 2 use dimension2=dimensionValue to send a value for this dimension. The configured Custom Dimension has to be in scope "Visit" for user or "Action".</li>
+<li>link An external URL the user has opened. Used for tracking outlink clicks. We recommend to also set the url parameter to this same value.</li>
+<li>download URL of a file the user has downloaded. Used for tracking downloads. We recommend to also set the url parameter to this same value.</li>
+<li>search The Site Search keyword. When specified, the request will not be tracked as a normal pageview but will instead be tracked as a Site Search request.</li>
+<li>searchCat when search is specified, you can optionally specify a search category with this parameter.</li>
+<li>searchCount when search is specified, we also recommend setting the search_count to the number of search results displayed on the results page. When keywords are tracked with &amp;search_count=0 they will appear in the "No Result Search Keyword" report.</li>
+<li>pvId Accepts a six character unique ID that identifies which actions were performed on a specific page view. When a page was viewed, all following tracking requests (such as events) during that page view should use the same pageview ID. Once another page was viewed a new unique ID should be generated. Use 0-9a-Z as possible characters for the unique ID.</li>
+<li>idGoal If specified, the tracking request will trigger a conversion for the goal of the website being tracked with this ID.</li>
+<li>revenue A monetary value that was generated as revenue by this goal conversion. Only used if idgoal is specified in the request. Can also be the grand total for the ecommerce order (required when tracking an ecommerce order).</li>
+<li>gtMs The amount of time it took the server to generate this action, in milliseconds. This value is used to process the Page speed report Avg. generation time column in the Page URL and Page Title reports, as well as a site wide running average of the speed of your server. Note: when using the JavaScript tracker this value is set to the time for server to generate response + the time for client to download response.</li>
+<li>cs The charset of the page being tracked. Specify the charset if the data you send to Matomo is encoded in a different character set than the default utf-8.</li>
+<li>ca Stands for custom action. &amp;ca=1 can be optionally sent along any tracking request that isn't a page view. For example it can be sent together with an event tracking request e_a=Action&amp;e_c=Category&amp;ca=1. The advantage being that should you ever disable the event plugin, then the event tracking requests will be ignored vs if the parameter is not set, a page view would be tracked even though it isn't a page view. For more background information check out #16570. Do not use this parameter together with a ping=1 tracking request.</li>
+<li>pfNet milliseconds Network time. How long it took to connect to server.</li>
+<li>pfSrv milliseconds Server time. How long it took the server to generate page.</li>
+<li>pfTfr milliseconds Transfer time. How long it takes the browser to download the response from the server</li>
+<li>pfDm1 milliseconds Dom processing time. How long the browser spends loading the webpage after the response was fully received until the user can starting interacting with it.</li>
+<li>pfDm2 milliseconds Dom completion time. How long it takes for the browser to load media and execute any Javascript code listening for the DOMContentLoaded event.</li>
+<li>pfOnl milliseconds Onload time. How long it takes the browser to execute Javascript code waiting for the window.load event.</li>
+<li>eC The event category. Must not be empty. (eg. Videos, Music, Games...)</li>
+<li>eA The event action. Must not be empty. (eg. Play, Pause, Duration, Add Playlist, Downloaded, Clicked...)</li>
+<li>eN The event name. (eg. a Movie name, or Song name, or File name...)</li>
+<li>eV The event value. Must be a float or integer value (numeric), not a string.</li>
+<li>cN The name of the content. For instance 'Ad Foo Bar'. Required for content tracking.</li>
+<li>cP The actual content piece. For instance the path to an image, video, audio, any text</li>
+<li>cT The target of the content. For instance the URL of a landing page</li>
+<li>cId The name of the interaction with the content. For instance a 'click'</li>
+<li>ecId The unique string identifier for the ecommerce order (required when tracking an ecommerce order). Must set idgoal=0.</li>
+<li>ecItems Items in the Ecommerce order. This is a JSON encoded array of items. Each item is an array with the following info in this order: item sku (required), item name (or if not applicable, set it to an empty string), item category (or if not applicable, set it to an empty string), item price (or if not applicable, set it to 0), item quantity (or if not applicable, set it to 1). An example value of ec_items would be: %5B%5B%22item1%20SKU%22%2C%22item1%20name%22%2C%22item1%20category%22%2C11.1111%2C2%5D%2C%5B%22item2%20SKU%22%2C%22item2%20name%22%2C%22%22%2C0%2C1%5D%5D see url decoded version on the <a href="https://developer.matomo.org/api-reference/tracking-api">Matomo API documentation</a></li>
+<li>ecSt The sub total of the order; excludes shipping.</li>
+<li>ecTx Tax Amount of the order</li>
+<li>ecSh Shipping cost of the Order</li>
+<li>ecDt Discount offered</li>
+<li>ects The UNIX timestamp of this customer's last ecommerce order. This value is used to process the "Days since last order" report.</li>
+<li>cip Override value for the visitor IP (both IPv4 and IPv6 notations supported).</li>
+<li>cdt Override for the datetime of the request (normally the current time is used). This can be used to record visits and page views in the past. The expected format is either a datetime such as: 2011-04-05 00:11:42 (remember to URL encode the value!), or a valid UNIX timestamp such as 1301919102. The datetime must be sent in UTC timezone. Note: if you record data in the past, you will need to force Matomo to re-process reports for the past dates. If you set cdt to a datetime older than 24 hours then token_auth must be set. If you set cdt with a datetime in the last 24 hours then you don't need to pass token_auth.</li>
+<li>country An override value for the country. Should be set to the two letter country code of the visitor (lowercase), eg fr, de, us.</li>
+<li>region An override value for the region. Should be set to a ISO 3166-2 region code, which are used by MaxMind's and DB-IP's GeoIP2 databases. See here for a list of them for every country.</li>
+<li>city An override value for the city. The name of the city the visitor is located in, eg, Tokyo.</li>
+<li>lat An override value for the visitor's latitude, eg 22.456.</li>
+<li>long An override value for the visitor's longitude, eg 22.456.</li>
+<li>maId (required) A unique id that is always the same while playing a media. As soon as the played media changes (new video or audio started), this ID has to change.</li>
+<li>maRe (required) The URL of the media resource.</li>
+<li>maMt (required) video or audio depending on the type of the media.</li>
+<li>maTi The name / title of the media.</li>
+<li>maPn The name of the media player, for example html5.</li>
+<li>maSt The time in seconds for how long a user has been playing this media. This number should typically increase when you send a media tracking request. It should be 0 if the media was only visible/impressed but not played. Do not increase this number when a media is paused.</li>
+<li>maLe The duration (the length) of the media in seconds. For example if a video is 90 seconds long, the value should be 90.</li>
+<li>maPs The progress / current position within the media. Defines basically at which position within the total length the user is currently playing.</li>
+<li>maTtp Defines after how many seconds the user has started playing this media. For example a user might have seen the poster of the video for 30 seconds before a user actually pressed the play button.</li>
+<li>maW The resolution width of the media in pixels. Only recommended being set for videos.</li>
+<li>maH The resolution height of the media in pixels. Only recommended being set for videos.</li>
+<li>maFs Should be 0 or 1 and defines whether the media is currently viewed in full screen. Only recommended being set for videos.</li>
+<li>maSe An optional comma separated list of which positions within a media a user has played. For example if the user has viewed position 5s, 10s, 15s and 35s, then you would need to send 5,10,15,35. We recommend to round to the next 5 seconds and not send a value for each second. Internally, Matomo may round to the next 15 or 30 seconds. For performance optimisation we recommend not sending the same position twice. Meaning if you have sent ma_se=10 there is no need to send later ma_se=10,20 but instead only ma_se=20.</li>
+<li>customData Additional data to send to the Matomo server.</li>
+</ul>
+<h5 id="send-data">Send data</h5>
+<p>Alternatively to calling the <code>track</code> method, one can call the <code>sendDataOrBulk</code> method which takes a simpler <code>Map</code> as a parameter.</p>
+<pre class="language-dart"><code class="language-dart">bool result = await MatomoForever.sendDataOrBulk(
+    addedData,
+);
+</code></pre>
+<p>Where:</p>
+<ul>
+<li>addedData Data to be added to the init data</li>
+</ul>
+<h5 id="send-the-bulk">Send the bulk</h5>
+<p>When sending in bulks (bulkSize &gt; 0), the bulk data can be pushed by calling the <code>sendQueue</code> method:</p>
+<pre class="language-dart"><code class="language-dart">bool result = await MatomoForever.sendQueue();
+</code></pre>
+<h2 id="feature-requestscommentsquestionsbugs">Feature requests/comments/questions/bugs</h2>
+<p>Feel free to log your feature requests/comments/questions/bugs here:
+<a href="https://github.com/lcuis/matomo_forever/issues">https://github.com/lcuis/matomo_forever/issues</a></p>
+<h2 id="contributions">Contributions</h2>
+<p>I would be happy to merge pull request proposals provided that:</p>
+<ul>
+<li>they don't break the compilation</li>
+<li>they pass the automated testing</li>
+<li>they provide the relevant adaptations to documentation and automated testing</li>
+<li>they bring value</li>
+<li>they don't completely transform the code and the way to use it</li>
+<li>they are readable (though, I enjoy <a href="https://www.ioccc.org/">https://www.ioccc.org/</a> as a contest full of curiosities)</li>
+</ul>
+<p>Contributions and forks are very welcome!</p>
+<p>In your pull request, feel free to add your line in the contributors section below:</p>
+<h3 id="contributors">Contributors</h3>
+<ul>
+<li><a href="https://github.com/lcuis">https://github.com/lcuis</a></li>
+</ul>
+<h2 id="cicd">CI/CD</h2>
+<p>Continuous integration/deployment status: <img src="https://github.com/lcuis/matomo_forever/workflows/CI-CD/badge.svg" alt="CI-CD"></p>
+</section>
+
+
+      <section class="summary">
+          <h2>Libraries</h2>
+        <dl>
+          <dt id="matomo_forever">
+  <span class="name"><a href="matomo_forever/matomo_forever-library.html">matomo_forever</a></span> 
+
+</dt>
+<dd> 
+</dd>
+
+        </dl>
+      </section>
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+  <form class="search-sidebar" role="search">
+    <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+  <li><a href="https://github.com/lcuis/matomo_forever">matomo_forever package</a></li>
+</ol>
+
+
+    <h5 class="hidden-xs"><span class="package-name">matomo_forever</span> <span class="package-kind">package</span></h5>
+    <ol>
+      <li class="section-title">Libraries</li>
+      <li><a href="matomo_forever/matomo_forever-library.html">matomo_forever</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+  </div>
+
+</main>
+
+<footer>
+  <span class="no-break">
+    matomo_forever
+      1.0.0
+  </span>
+
+  
+</footer>
+
+
+
+<script src="static-assets/highlight.pack.js?v1"></script>
+<script src="static-assets/script.js?v1"></script>
+
+
+
+</body>
+
+</html>
+
