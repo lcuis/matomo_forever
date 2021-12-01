@@ -35,11 +35,8 @@ The following builds are available from CI/CD:
 - [Android](https://lcuis.github.io/matomo_forever/matomo_forever_example_android.apk)
 - [Linux desktop](https://lcuis.github.io/matomo_forever/matomo_forever_example_linux.zip)
 - [Web](https://lcuis.github.io/matomo_forever/matomo_forever_example_web.zip)
-- [](https://lcuis.github.io/matomo_forever/)
-- [](https://lcuis.github.io/matomo_forever/)
-- [](https://lcuis.github.io/matomo_forever/)
 
-https://lcuis.github.io/matomo_forever/#/
+Also, the app is available from a browser [here](https://lcuis.github.io/matomo_forever/).
 
 ### Code
 
