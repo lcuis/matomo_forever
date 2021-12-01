@@ -82,8 +82,8 @@ jobs:
 #      - run: pushd example&&flutter pub get
 #      - run: pushd example&&flutter build ios --release --no-codesign
 
-      - run: pushd example&&flutter create .
       - run: pushd example&&flutter config --enable-macos-desktop
+      - run: pushd example&&flutter create .
       - run: pushd example&&flutter pub get
       - run: pushd example&&flutter build macos --release
       - run: mkdir -p docs

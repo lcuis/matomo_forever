@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="Publishing macos to pages.">
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +211,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638400169196</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Publishing macos to pages.">
+      <created>1638401264763</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1638401264763</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -229,6 +235,7 @@
     <MESSAGE value="Publishing web to pages." />
     <MESSAGE value="Publishing android to pages." />
     <MESSAGE value="Publishing macos and ios to pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Publishing macos and ios to pages." />
+    <MESSAGE value="Publishing macos to pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Publishing macos to pages." />
   </component>
 </project>
