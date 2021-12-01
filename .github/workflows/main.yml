@@ -116,7 +116,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'docs/matomo_forever_example_windows.zip'
-          path: 'example/build/'
+          path: 'example/build/windows/runner/Release/'
       -
         name: Deploy to GitHub Pages
         if: success()
