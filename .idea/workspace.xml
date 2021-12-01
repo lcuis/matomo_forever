@@ -9,7 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="">
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="Publishing android to pages.">
+      <change afterPath="$PROJECT_DIR$/doc/web_screenshot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -114,7 +115,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638371355677</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Publishing android to pages.">
+      <created>1638372820955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1638372820955</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -129,6 +137,7 @@
     <MESSAGE value="Added linux-desktop compilation required installations to CI-CD." />
     <MESSAGE value="Deploying to pages instead of wiki." />
     <MESSAGE value="Publishing web to pages." />
-    <option name="LAST_COMMIT_MESSAGE" value="Publishing web to pages." />
+    <MESSAGE value="Publishing android to pages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Publishing android to pages." />
   </component>
 </project>

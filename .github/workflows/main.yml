@@ -3,34 +3,33 @@ name: CI-CD
 on: [push,pull_request]
 
 jobs:
-  test:
-    name: CI-CD from ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-java@v1
-        with:
-          java-version: '12.x'
-      - uses: subosito/flutter-action@v1
-        with:
-          channel: 'dev'
-      - run: flutter pub get
-
-      - run: mkdir -p docs
-      - run: rm -rf docs/*
-
+#  test:
+#    name: CI-CD from ${{ matrix.os }}
+#    runs-on: ${{ matrix.os }}
+#    strategy:
+#      matrix:
+#        os: [ubuntu-latest]
+#    steps:
+#      - uses: actions/checkout@v2
+#      - uses: actions/setup-java@v1
+#        with:
+#          java-version: '12.x'
+#      - uses: subosito/flutter-action@v1
+#        with:
+#          channel: 'dev'
+#      - run: flutter pub get
+#
+#      - run: mkdir -p docs
+#      - run: rm -rf docs/*
+#
 #      - run: flutter format .
 #      - run: flutter analyze
 #      - run: flutter test --dart-define="site_url=${{ secrets.site_url }}" --dart-define="token_auth=${{ secrets.token_auth }}" --dart-define="idsite=${{ secrets.idsite }}" --dart-define="action_name=${{ secrets.action_name }}"
-
-      - run: pushd example&&flutter build apk --release
-      - run: mv example/build/app/outputs/flutter-apk/app-release.apk docs/matomo_forever_example_android.apk
-
-
-      #      - run: flutter config --enable-linux-desktop
+#
+#      - run: pushd example&&flutter build apk --release
+#      - run: mv example/build/app/outputs/flutter-apk/app-release.apk docs/matomo_forever_example_android.apk
+#
+#      - run: flutter config --enable-linux-desktop
 #      - name: Installations for linux build
 #        run: |
 #          sudo apt-get update -y
@@ -42,7 +41,7 @@ jobs:
 #          type: 'zip'
 #          filename: 'docs/matomo_forever_example_linux.zip'
 #          path: 'example/build/linux/x64/release/bundle/'
-
+#
 #      - run: pushd example&&flutter build web --web-renderer canvaskit --release
 #      - name: Archive web Release
 #        uses: thedoctor0/zip-release@master
@@ -52,7 +51,39 @@ jobs:
 #          path: 'example/build/web/'
 #      - run: cp -r example/build/web/* docs/
 #      - run: sed -i 's/<base href="\/">/<base href="\/matomo_forever\/">/g' docs/index.html
+#
+#      -
+#        name: Deploy to GitHub Pages
+#        if: success()
+#        uses: crazy-max/ghaction-github-pages@v2
+#        with:
+#          build_dir: docs
+#          jekyll: false
+#          keep_history: true
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
 
+  build:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v2
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '2.0.5'
+      - run: flutter pub get
+      - run: flutter config --enable-macos-desktop
+      - run: pushd example&&flutter build macos --release
+      - run: pushd example&&flutter build ios --release --no-codesign
+      - name: Archive ios and mac Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'zip'
+          filename: 'docs/matomo_forever_example_macos_and_ios.zip'
+          path: 'example/build/'
       -
         name: Deploy to GitHub Pages
         if: success()
