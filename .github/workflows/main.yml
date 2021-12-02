@@ -77,7 +77,7 @@ jobs:
 
 #      - run: flutter upgrade
 #      - run: flutter pub get
-#      - run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
+#      #- run: sed -i '' -e "s/# platform :ios, '9\.0'/platform :ios, '12\.0'/" example/ios/Podfile
 #      - run: pushd example&&flutter create .
 #      - run: pushd example&&flutter pub get
 #      - run: pushd example&&flutter build ios --release --no-codesign
@@ -85,6 +85,8 @@ jobs:
       - run: pushd example&&flutter config --enable-macos-desktop
       - run: pushd example&&flutter create .
       - run: pushd example&&flutter pub get
+      - run: sed -i '' -e "s/<\/dict>/<key>com\.apple\.security\.network\.client<\/key><true\/><\/dict>/" example/macos/Runner/DebugProfile.entitlements
+      - run: sed -i '' -e "s/<\/dict>/<key>com\.apple\.security\.network\.client<\/key><true\/><\/dict>/" example/macos/Runner/Release.entitlements
       - run: pushd example&&flutter build macos --release
       - run: mkdir -p docs
       - run: rm -rf docs/*

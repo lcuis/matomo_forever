@@ -22,7 +22,7 @@ For example, it supports:
 
 ## Platforms
 
-This plugin has been successfully tested on *Android*, *Linux* and *Chrome*. It is expected to work fine on *iOS*, *MacOS* and *Windows*.
+This plugin has been successfully tested on *Android*, *iOS*, *Linux* and *Chrome*. It is expected to work fine on *MacOS* and *Windows*.
 
 ## Examples
 

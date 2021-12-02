@@ -145,9 +145,9 @@ packages:
   matomo_forever:
     dependency: "direct main"
     description:
-      path: ".."
-      relative: true
-    source: path
+      name: matomo_forever
+      url: "https://pub.dartlang.org"
+    source: hosted
     version: "1.0.0"
   meta:
     dependency: transitive
