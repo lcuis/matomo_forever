@@ -1,6 +1,6 @@
 name: matomo_forever
 description: A perennial Dart plugin to send data to a Matomo server with a Flutter example app.
-version: 1.0.0
+version: 1.0.0+1
 homepage: https://github.com/lcuis/matomo_forever
 
 environment:

@@ -22,7 +22,7 @@ For example, it supports:
 
 ## Platforms
 
-This plugin has been successfully tested on *Android*, *iOS*, *Linux* and *Chrome*. It is expected to work fine on *MacOS* and *Windows*.
+This plugin has been successfully tested on *Android*, *iOS*, *Linux*, *MacOS* and *Chrome*. It is expected to work fine on *Windows*.
 
 ## Examples
 
@@ -37,7 +37,7 @@ The following builds of the example app are available from CI/CD:
 - [Android](https://lcuis.github.io/matomo_forever/matomo_forever_example_android.apk)
 - [Linux desktop](https://lcuis.github.io/matomo_forever/matomo_forever_example_linux.zip)
 - [Web](https://lcuis.github.io/matomo_forever/matomo_forever_example_web.zip)
-- [Windows](https://lcuis.github.io/matomo_forever/matomo_forever_example_windows.zip)
+- [Windows](https://lcuis.github.io/matomo_forever/matomo_forever_example_windows.zip) (requires Microsoft Visual C++ Redistributable)
 - [MacOS](https://lcuis.github.io/matomo_forever/matomo_forever_example_macos.zip)
 
 Also, the example app is available from a browser directly [here](https://lcuis.github.io/matomo_forever/). To see it work, you may have to disable your ad-blocker.
@@ -315,6 +315,25 @@ When sending in bulks (bulkSize > 0), the bulk data can be pushed by calling the
 
 ```dart
 bool result = await MatomoForever.sendQueue();
+```
+
+#### Permissions
+
+Communication with a Matomo server requires internet access for Android and MacOS.
+
+##### Permissions on Android
+
+Add this to your `android/app/src/main/AndroidManifest.xml` `<manifest>`:
+```xml
+    <uses-permission android:name="android.permission.INTERNET" />
+```
+
+##### Permissions on MacOS
+
+Add this to your `macos/Runner/DebugProfile.entitlements` and `macos/Runner/Release.entitlements` files:
+```xml
+    <key>com.apple.security.network.client</key>
+    <true/>
 ```
 
 ## Feature requests/comments/questions/bugs
