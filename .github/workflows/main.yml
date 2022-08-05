@@ -39,8 +39,19 @@ jobs:
           sudo apt-get update -y
           sudo apt-get install -y clang ninja-build libgtk-3-dev
       - run: pushd example&&flutter pub upgrade&&flutter build linux --release&&popd&&zip -r -9 docs/matomo_forever_example_linux.zip example/build/linux/x64/release/bundle/
-
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          prerelease: false
+          files: docs/matomo_forever_example_linux.zip
+      - run: rm docs/matomo_forever_example_linux.zip
       - run: pushd example&&flutter pub upgrade&&flutter build web --web-renderer canvaskit --release&&popd&&zip -r -9 docs/matomo_forever_example_web.zip example/build/web/
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          prerelease: false
+          files: docs/matomo_forever_example_web.zip
+      - run: rm docs/matomo_forever_example_web.zip
       - run: cp -r example/build/web/* docs/
       - run: sed -i 's/<base href="\/">/<base href="\/matomo_forever\/">/g' docs/index.html
 
@@ -81,6 +92,12 @@ jobs:
       - run: mkdir -p docs
       - run: rm -rf docs/*
       - run: zip -r -9 docs/matomo_forever_example_macos.zip example/build/macos/Build/Products/Release/
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          prerelease: false
+          files: docs/matomo_forever_example_macos.zip
+      - run: rm docs/matomo_forever_example_macos.zip
       -
         name: Deploy to GitHub Pages
         if: success()
@@ -102,7 +119,18 @@ jobs:
       - run: pushd example&&flutter config --enable-windows-desktop
       - run: pushd example&&flutter create .&&flutter pub upgrade&&flutter build windows
       - run: md docs
-      - run: zip -r -9 docs/matomo_forever_example_windows.zip example/build/windows/runner/Release/
+      - name: Archive Windows Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: 'zip'
+          filename: 'docs/matomo_forever_example_windows.zip'
+          path: 'example/build/windows/runner/Release/'
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          prerelease: false
+          files: docs/matomo_forever_example_macos.zip
+      - run: rm docs/matomo_forever_example_macos.zip
       -
         name: Deploy to GitHub Pages
         if: success()
