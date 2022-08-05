@@ -44,6 +44,7 @@ jobs:
           repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
           prerelease: false
           files: docs/matomo_forever_example_linux.zip
+          automatic_release_tag: latest-linux
       - run: rm docs/matomo_forever_example_linux.zip
       - run: pushd example&&flutter pub upgrade&&flutter build web --web-renderer canvaskit --release&&popd&&zip -r -9 docs/matomo_forever_example_web.zip example/build/web/
       - uses: "marvinpinto/action-automatic-releases@latest"
@@ -51,6 +52,7 @@ jobs:
           repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
           prerelease: false
           files: docs/matomo_forever_example_web.zip
+          automatic_release_tag: latest-web
       - run: rm docs/matomo_forever_example_web.zip
       - run: cp -r example/build/web/* docs/
       - run: sed -i 's/<base href="\/">/<base href="\/matomo_forever\/">/g' docs/index.html
@@ -97,6 +99,7 @@ jobs:
           repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
           prerelease: false
           files: docs/matomo_forever_example_macos.zip
+          automatic_release_tag: latest-macos
       - run: rm docs/matomo_forever_example_macos.zip
       -
         name: Deploy to GitHub Pages
@@ -129,8 +132,9 @@ jobs:
         with:
           repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
           prerelease: false
-          files: docs/matomo_forever_example_macos.zip
-      - run: rm docs/matomo_forever_example_macos.zip
+          files: docs/matomo_forever_example_windows.zip
+          automatic_release_tag: latest-windows
+      - run: rm docs/matomo_forever_example_windows.zip
       -
         name: Deploy to GitHub Pages
         if: success()
