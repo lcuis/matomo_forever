@@ -40,19 +40,15 @@ jobs:
           sudo apt-get install -y clang ninja-build libgtk-3-dev
       - run: pushd example&&flutter pub upgrade&&flutter build linux --release
       - name: Archive Linux Release
-        uses: lcuis/zip-release@master
+        uses: montudor/action-zip@v1
         with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example_linux.zip'
-          path: 'example/build/linux/x64/release/bundle/'
+            args: zip -qq -9 -r docs/matomo_forever_example_linux.zip example/build/linux/x64/release/bundle/
 
       - run: pushd example&&flutter pub upgrade&&flutter build web --web-renderer canvaskit --release
       - name: Archive web Release
-        uses: lcuis/zip-release@master
+        uses: montudor/action-zip@v1
         with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example_web.zip'
-          path: 'example/build/web/'
+          args: zip -qq -9 -r docs/matomo_forever_example_web.zip example/build/web/
       - run: cp -r example/build/web/* docs/
       - run: sed -i 's/<base href="\/">/<base href="\/matomo_forever\/">/g' docs/index.html
 
@@ -93,11 +89,9 @@ jobs:
       - run: mkdir -p docs
       - run: rm -rf docs/*
       - name: Archive mac Release
-        uses: lcuis/zip-release@master
+        uses: montudor/action-zip@v1
         with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example_macos.zip'
-          path: 'example/build/macos/Build/Products/Release/'
+          args: zip -qq -9 -r docs/matomo_forever_example_macos.zip example/build/macos/Build/Products/Release/
       -
         name: Deploy to GitHub Pages
         if: success()
@@ -120,11 +114,9 @@ jobs:
       - run: pushd example&&flutter create .&&flutter pub upgrade&&flutter build windows
       - run: md docs
       - name: Archive Windows Release
-        uses: lcuis/zip-release@master
+        uses: montudor/action-zip@v1
         with:
-          type: 'zip'
-          filename: 'docs/matomo_forever_example_windows.zip'
-          path: 'example/build/windows/runner/Release/'
+          args: zip -qq -9 -r docs/matomo_forever_example_windows.zip example/build/windows/runner/Release/
       -
         name: Deploy to GitHub Pages
         if: success()
