@@ -34,11 +34,11 @@ This example app is a good way to interact with a Matomo server as a client.
 ### Demonstration
 
 The following builds of the example app are available from CI/CD:
-- [Android](https://lcuis.github.io/matomo_forever/matomo_forever_example_android.apk)
-- [Linux desktop](https://lcuis.github.io/matomo_forever/matomo_forever_example_linux.zip)
-- [Web](https://lcuis.github.io/matomo_forever/matomo_forever_example_web.zip)
-- [Windows](https://lcuis.github.io/matomo_forever/matomo_forever_example_windows.zip) (requires Microsoft Visual C++ Redistributable)
-- [MacOS](https://lcuis.github.io/matomo_forever/matomo_forever_example_macos.zip)
+- [Android](https://github.com/lcuis/matomo_forever/releases/download/latest-android/matomo_forever_example_android.zip)
+- [Linux desktop](https://github.com/lcuis/matomo_forever/releases/download/latest-linux/matomo_forever_example_linux.zip)
+- [Web](https://github.com/lcuis/matomo_forever/releases/download/latest-web/matomo_forever_example_web.zip)
+- [Windows](https://github.com/lcuis/matomo_forever/releases/download/latest-windows/matomo_forever_example_windows.zip) (requires Microsoft Visual C++ Redistributable)
+- [MacOS](https://github.com/lcuis/matomo_forever/releases/download/latest-macos/matomo_forever_example_macos.zip)
 
 Also, the example app is available from a browser directly [here](https://lcuis.github.io/matomo_forever/). To see it work, you may have to disable your ad-blocker.
 

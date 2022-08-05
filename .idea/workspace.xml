@@ -12,6 +12,13 @@
     <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="CI/CD adaptations">
       <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/__404error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/static-assets/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659718481078</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="CI/CD adaptations">
+      <created>1659719046095</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1659719046095</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">

@@ -5,6 +5,8 @@ on:
     paths:
       - 'pubspec.yaml'
       - '.github/workflows/main.yml'
+    branches:
+      - master
 
 jobs:
   linux:
@@ -32,6 +34,14 @@ jobs:
 
       - run: pushd example&&flutter pub upgrade&&flutter build apk --release
       - run: mv example/build/app/outputs/flutter-apk/app-release.apk docs/matomo_forever_example_android.apk
+      - run: zip -r -9 docs/matomo_forever_example_android.zip docs/matomo_forever_example_android.apk
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          prerelease: false
+          files: docs/matomo_forever_example_android.zip
+          automatic_release_tag: latest-android
+      - run: rm docs/matomo_forever_example_android.zip
 
       - run: flutter config --enable-linux-desktop
       - name: Installations for linux build
