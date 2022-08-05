@@ -1,6 +1,9 @@
 name: CI-CD
 
-on: [push,pull_request]
+on:
+  push:
+    paths:
+      - 'pubspec.yaml'
 
 jobs:
   linux:
@@ -115,7 +118,7 @@ jobs:
         with:
           channel: beta
       - run: pushd example&&flutter config --enable-windows-desktop
-      - run: pushd example&&flutter create .&&flutter build windows
+      - run: pushd example&&flutter create .&&flutter pub upgrade&&flutter build windows
       - run: md docs
       - name: Archive Windows Release
         uses: thedoctor0/zip-release@master
