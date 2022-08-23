@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
-  <meta name="generator" content="made with love by dartdoc 2.0.0">
+  <meta name="generator" content="made with love by dartdoc 6.0.1">
   <meta name="description" content="matomo_forever API docs, for the Dart programming language.">
   <title>matomo_forever - Dart API docs</title>
 
@@ -22,8 +22,7 @@
 </head>
 
 
-<body data-base-href=""
-      data-using-base-href="false">
+<body data-base-href="" data-using-base-href="false">
 
 <div id="overlay-under-drawer"></div>
 
@@ -64,10 +63,21 @@ For example, it supports:</p>
 <li>Sending in bulks.</li>
 </ul>
 <h2 id="platforms">Platforms</h2>
-<p>This plugin has been successfully tested on <em>Android</em>, <em>Linux</em> and <em>Chrome</em>. It is expected to work fine on <em>iOS</em>, <em>MacOS</em> and <em>Windows</em>.</p>
+<p>This plugin has been successfully tested on <em>Android</em>, <em>iOS</em>, <em>Linux</em>, <em>MacOS</em> and <em>Chrome</em>. It is expected to work fine on <em>Windows</em>.</p>
 <h2 id="examples">Examples</h2>
 <p>An example project app is included in the main project under the <code>example</code> folder.
 This example app is a good way to interact with a Matomo server as a client.</p>
+<p><img src="https://github.com/lcuis/matomo_forever/raw/master/doc/web_screenshot.png" alt="matomo_forever example app screenshot"></p>
+<h3 id="demonstration">Demonstration</h3>
+<p>The following builds of the example app are available from CI/CD:</p>
+<ul>
+<li><a href="https://github.com/lcuis/matomo_forever/releases/download/latest-android/matomo_forever_example_android.zip">Android</a></li>
+<li><a href="https://github.com/lcuis/matomo_forever/releases/download/latest-linux/matomo_forever_example_linux.zip">Linux desktop</a></li>
+<li><a href="https://github.com/lcuis/matomo_forever/releases/download/latest-web/matomo_forever_example_web.zip">Web</a></li>
+<li><a href="https://github.com/lcuis/matomo_forever/releases/download/latest-windows/matomo_forever_example_windows.zip">Windows</a> (requires Microsoft Visual C++ Redistributable)</li>
+<li><a href="https://github.com/lcuis/matomo_forever/releases/download/latest-macos/matomo_forever_example_macos.zip">MacOS</a></li>
+</ul>
+<p>Also, the example app is available from a browser directly <a href="https://lcuis.github.io/matomo_forever/">here</a>. To see it work, you may have to disable your ad-blocker.</p>
 <h3 id="code">Code</h3>
 <h4 id="plugin-usage">Plugin usage</h4>
 <p>Add to your <code>pubspec.yaml</code> in the <code>dependencies</code> section:</p>
@@ -322,6 +332,17 @@ This example app is a good way to interact with a Matomo server as a client.</p>
 <p>When sending in bulks (bulkSize &gt; 0), the bulk data can be pushed by calling the <code>sendQueue</code> method:</p>
 <pre class="language-dart"><code class="language-dart">bool result = await MatomoForever.sendQueue();
 </code></pre>
+<h4 id="permissions">Permissions</h4>
+<p>Communication with a Matomo server requires internet access for Android and MacOS.</p>
+<h5 id="permissions-on-android">Permissions on Android</h5>
+<p>Add this to your <code>android/app/src/main/AndroidManifest.xml</code> <code>&lt;manifest&gt;</code>:</p>
+<pre class="language-xml"><code class="language-xml">    &lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+</code></pre>
+<h5 id="permissions-on-macos">Permissions on MacOS</h5>
+<p>Add this to your <code>macos/Runner/DebugProfile.entitlements</code> and <code>macos/Runner/Release.entitlements</code> files:</p>
+<pre class="language-xml"><code class="language-xml">    &lt;key&gt;com.apple.security.network.client&lt;/key&gt;
+    &lt;true/&gt;
+</code></pre>
 <h2 id="feature-requestscommentsquestionsbugs">Feature requests/comments/questions/bugs</h2>
 <p>Feel free to log your feature requests/comments/questions/bugs here:
 <a href="https://github.com/lcuis/matomo_forever/issues">https://github.com/lcuis/matomo_forever/issues</a></p>
@@ -353,7 +374,7 @@ This example app is a good way to interact with a Matomo server as a client.</p>
   <span class="name"><a href="matomo_forever/matomo_forever-library.html">matomo_forever</a></span> 
 
 </dt>
-<dd> 
+<dd>
 </dd>
 
         </dl>
@@ -389,7 +410,7 @@ This example app is a good way to interact with a Matomo server as a client.</p>
 <footer>
   <span class="no-break">
     matomo_forever
-      1.0.0
+      1.0.2+1
   </span>
 
   
@@ -398,7 +419,7 @@ This example app is a good way to interact with a Matomo server as a client.</p>
 
 
 <script src="static-assets/highlight.pack.js?v1"></script>
-<script src="static-assets/script.js?v1"></script>
+<script src="static-assets/docs.dart.js"></script>
 
 
 

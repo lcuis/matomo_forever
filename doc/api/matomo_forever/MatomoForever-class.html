@@ -21,8 +21,7 @@
 </head>
 
 
-<body data-base-href="../"
-      data-using-base-href="false">
+<body data-base-href="../" data-using-base-href="false">
 
 <div id="overlay-under-drawer"></div>
 
@@ -57,18 +56,19 @@ is used.</p>
 
 
 
-    <section class="summary offset-anchor" id="constructors">
-      <h2>Constructors</h2>
+    
+  <section class="summary offset-anchor" id="constructors">
+    <h2>Constructors</h2>
 
-      <dl class="constructor-summary-list">
+    <dl class="constructor-summary-list">
         <dt id="MatomoForever" class="callable">
           <span class="name"><a href="../matomo_forever/MatomoForever/MatomoForever.html">MatomoForever</a></span><span class="signature">()</span>
         </dt>
         <dd>
-           
+          
         </dd>
-      </dl>
-    </section>
+    </dl>
+  </section>
 
     <section class="summary offset-anchor" id="instance-properties">
       <h2>Properties</h2>
@@ -81,7 +81,7 @@ is used.</p>
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/apiV.html">apiV</a> The parameter &amp;apiv=1 defines the api version to use (currently
-always set to 1) 
+always set to 1)
   <div class="features">read / write</div>
 
 </dd>
@@ -95,7 +95,7 @@ always set to 1)
   <a href="../matomo_forever/MatomoForever/bots.html">bots</a> By default Matomo does not track bots. If you use the Tracking HTTP
 API directly, you may be interested in tracking bot requests. To enable
 Bot Tracking in Matomo, set the parameter bots to true (&amp;bots=1) in your
-requests to matomo.php. 
+requests to matomo.php.
   <div class="features">read / write</div>
 
 </dd>
@@ -108,7 +108,7 @@ requests to matomo.php.
 <dd>
   <a href="../matomo_forever/MatomoForever/bulkSize.html">bulkSize</a> Max size the local queue can reach before sending the bulk of
 requests. If &lt;= 0, no bulk mechanism. requests are sent straight away.
-Bulk sending requires <a href="../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a> to be set. 
+Bulk sending requires <a href="../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a> to be set.
   <div class="features">read / write</div>
 
 </dd>
@@ -120,7 +120,7 @@ Bulk sending requires <a href="../matomo_forever/MatomoForever/tokenAuth.html">t
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/debug.html">debug</a> If Matomo server is configured with debug_on_demand = 1, debug can
-be set to true (1) 
+be set to true (1)
   <div class="features">read / write</div>
 
 </dd>
@@ -131,7 +131,7 @@ be set to true (1)
 
 </dt>
 <dd class="inherited">
-  The hash code for this object. <a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">[...]</a>
+  The hash code for this object.
   <div class="features">read-only, inherited</div>
 
 </dd>
@@ -142,7 +142,7 @@ be set to true (1)
 
 </dt>
 <dd>
-  <a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request. 
+  <a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request.
   <div class="features">read / write</div>
 
 </dd>
@@ -159,7 +159,7 @@ change after it is assigned. If this value is not set Matomo (formerly
 Piwik) will still track visits, but the unique visitors metric might be
 less accurate.
 Corresponds to _id in
-<a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a> 
+<a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a>
   <div class="features">read / write</div>
 
 </dd>
@@ -170,19 +170,19 @@ Corresponds to _id in
 
 </dt>
 <dd>
-  <a href="../matomo_forever/MatomoForever/idSite.html">idSite</a> The ID of the website we're tracking a visit/action for. 
+  <a href="../matomo_forever/MatomoForever/idSite.html">idSite</a> The ID of the website we're tracking a visit/action for.
   <div class="features">read / write</div>
 
 </dd>
 
         <dt id="method" class="property">
   <span class="name"><a href="../matomo_forever/MatomoForever/method.html">method</a></span>
-  <span class="signature">&#8596; <a href="../matomo_forever/MatomoForeverMethod-class.html">MatomoForeverMethod</a></span> 
+  <span class="signature">&#8596; <a href="../matomo_forever/MatomoForeverMethod.html">MatomoForeverMethod</a></span> 
 
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/method.html">method</a> Can be either post or get except for bulk sending which must be
-sent through post method. 
+sent through post method.
   <div class="features">read / write</div>
 
 </dd>
@@ -194,7 +194,7 @@ sent through post method.
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/persistentParameters.html">persistentParameters</a> Custom parameters sent at each call.
-Refer to: <a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a> 
+Refer to: <a href="https://developer.matomo.org/api-reference/tracking-api">https://developer.matomo.org/api-reference/tracking-api</a>
   <div class="features">read / write</div>
 
 </dd>
@@ -212,7 +212,7 @@ to provide accurate "Visit duration" metric when this parameter is set.
 It won't record any other data. This means by sending an additional
 tracking request when the user leaves your site or app with ping set to
 true (&amp;ping=1), you fix the issue where the time spent of the last page
-visited is reported as 0 seconds. 
+visited is reported as 0 seconds.
   <div class="features">read / write</div>
 
 </dd>
@@ -226,7 +226,7 @@ visited is reported as 0 seconds.
   <a href="../matomo_forever/MatomoForever/queuedTracking.html">queuedTracking</a> When set to false (0), the queued tracking handler won't
 be used and instead the tracking request will be executed directly. This
 can be useful when you need to debug a tracking problem or want to test
-that the tracking works in general. 
+that the tracking works in general.
   <div class="features">read / write</div>
 
 </dd>
@@ -237,7 +237,7 @@ that the tracking works in general.
 
 </dt>
 <dd>
-  <a href="../matomo_forever/MatomoForever/rec.html">rec</a> Required for tracking, must be set to true. 
+  <a href="../matomo_forever/MatomoForever/rec.html">rec</a> Required for tracking, must be set to true.
   <div class="features">read / write</div>
 
 </dd>
@@ -248,7 +248,7 @@ that the tracking works in general.
 
 </dt>
 <dd class="inherited">
-  A representation of the runtime type of the object. 
+  A representation of the runtime type of the object.
   <div class="features">read-only, inherited</div>
 
 </dd>
@@ -262,7 +262,7 @@ that the tracking works in general.
   <a href="../matomo_forever/MatomoForever/sendImage.html">sendImage</a> If set to false (send_image=0) Matomo will respond with HTTP
 204 response code instead of a GIF image. This improves performance and
 can fix errors if images are not allowed to be obtained directly (eg
-Chrome Apps). Available since Matomo 2.10.0 
+Chrome Apps). Available since Matomo 2.10.0
   <div class="features">read / write</div>
 
 </dd>
@@ -278,7 +278,7 @@ is a fallback in case it is not initialized through the init call.
 Returns true for success.
 <code>urlWithoutParameters</code> The matomo.php URL without the parameters.
 <code>urlParameters</code> The parameters String formatted for a GET request.
-<a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request. 
+<a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request.
   <div class="features">read / write</div>
 
 </dd>
@@ -294,7 +294,7 @@ There is a fallback in case it is not initialized through the init call.
 Returns true for success.
 <code>urlWithoutParameters</code> The matomo.php URL without the parameters.
 <code>data</code> The parameters to be sent by post.
-<a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request. 
+<a href="../matomo_forever/MatomoForever/headers.html">headers</a> The headers to be sent along with request.
   <div class="features">read / write</div>
 
 </dd>
@@ -306,7 +306,7 @@ Returns true for success.
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/siteUrl.html">siteUrl</a> The Matomo or piwik URL such as
-<a href="https://matomo.example.com/matomo.php">https://matomo.example.com/matomo.php</a> 
+<a href="https://matomo.example.com/matomo.php">https://matomo.example.com/matomo.php</a>
   <div class="features">read / write</div>
 
 </dd>
@@ -319,7 +319,7 @@ Returns true for success.
 <dd>
   <a href="../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a> 32 character authorization key used to authenticate the API
 request. We recommend to create a user specifically for accessing the
-Tracking API, and give the user only write permission on the website(s). 
+Tracking API, and give the user only write permission on the website(s).
   <div class="features">read / write</div>
 
 </dd>
@@ -327,9 +327,12 @@ Tracking API, and give the user only write permission on the website(s).
       </dl>
     </section>
 
-    <section class="summary offset-anchor" id="instance-methods">
-      <h2>Methods</h2>
-      <dl class="callables">
+    
+  <section
+      class="summary offset-anchor"
+      id="instance-methods">
+    <h2>Methods</h2>
+    <dl class="callables">
         <dt id="noSuchMethod" class="callable inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
     <span class="returntype parameter">&#8594; dynamic</span>
@@ -338,7 +341,7 @@ Tracking API, and give the user only write permission on the website(s).
 
 </dt>
 <dd class="inherited">
-  Invoked when a non-existent method or property is accessed. <a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">[...]</a>
+  Invoked when a non-existent method or property is accessed.
   <div class="features">inherited</div>
 
 </dd>
@@ -351,17 +354,19 @@ Tracking API, and give the user only write permission on the website(s).
 
 </dt>
 <dd class="inherited">
-  A string representation of this object. <a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">[...]</a>
+  A string representation of this object.
   <div class="features">inherited</div>
 
 </dd>
 
-      </dl>
-    </section>
-
-    <section class="summary offset-anchor inherited" id="operators">
-      <h2>Operators</h2>
-      <dl class="callables">
+    </dl>
+  </section>
+    
+  <section
+      class="summary offset-anchor inherited"
+      id="operators">
+    <h2>Operators</h2>
+    <dl class="callables">
         <dt id="operator ==" class="callable inherited">
   <span class="name"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
     <span class="returntype parameter">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>
@@ -370,18 +375,18 @@ Tracking API, and give the user only write permission on the website(s).
 
 </dt>
 <dd class="inherited">
-  The equality operator. <a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">[...]</a>
+  The equality operator.
   <div class="features">inherited</div>
 
 </dd>
 
-      </dl>
-    </section>
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-properties">
+    <h2>Static Properties</h2>
 
-    <section class="summary offset-anchor" id="static-properties">
-      <h2>Static Properties</h2>
-
-      <dl class="properties">
+    <dl class="properties">
         <dt id="isInitialized" class="property">
   <span class="name"><a href="../matomo_forever/MatomoForever/isInitialized.html">isInitialized</a></span>
   <span class="signature">&#8594; <a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> 
@@ -389,26 +394,26 @@ Tracking API, and give the user only write permission on the website(s).
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/isInitialized.html">isInitialized</a> returns whether the global _matomoForever has been
-initialized. 
+initialized.
   <div class="features">read-only</div>
 
 </dd>
 
-      </dl>
-    </section>
-
-    <section class="summary offset-anchor" id="static-methods">
-      <h2>Static Methods</h2>
-      <dl class="callables">
+    </dl>
+  </section>
+    
+  <section class="summary offset-anchor" id="static-methods">
+    <h2>Static Methods</h2>
+    <dl class="callables">
         <dt id="init" class="callable">
-  <span class="name"><a href="../matomo_forever/MatomoForever/init.html">init</a></span><span class="signature">(<wbr><span class="parameter" id="init-param-siteUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">siteUrl</span>, </span><span class="parameter" id="init-param-idSite"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">idSite</span>, </span><span class="parameter" id="init-param-id">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">id</span>, </span><span class="parameter" id="init-param-apiV"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">apiV</span>, </span><span class="parameter" id="init-param-rec"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">rec</span> = <span class="default-value">true</span>, </span><span class="parameter" id="init-param-method"><span class="type-annotation"><a href="../matomo_forever/MatomoForeverMethod-class.html">MatomoForeverMethod</a></span> <span class="parameter-name">method</span> = <span class="default-value">MatomoForeverMethod.post</span>, </span><span class="parameter" id="init-param-bulkSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">bulkSize</span> = <span class="default-value">0</span>, </span><span class="parameter" id="init-param-tokenAuth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tokenAuth</span>, </span><span class="parameter" id="init-param-queuedTracking"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">queuedTracking</span>, </span><span class="parameter" id="init-param-sendImage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">sendImage</span>, </span><span class="parameter" id="init-param-ping"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">ping</span>, </span><span class="parameter" id="init-param-bots"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">bots</span>, </span><span class="parameter" id="init-param-debug"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">debug</span>, </span><span class="parameter" id="init-param-headers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>, </span><span class="parameter" id="init-param-persistentParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">persistentParameters</span>, </span><span class="parameter" id="init-param-sendThroughGetMethod"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span> <span class="parameter-name">sendThroughGetMethod</span>(<span class="parameter" id="param-urlWithoutParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlWithoutParameters</span>, </span><span class="parameter" id="param-urlParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlParameters</span>, </span><span class="parameter" id="param-headers">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>}</span>)?, </span><span class="parameter" id="init-param-sendThroughPostMethod"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span> <span class="parameter-name">sendThroughPostMethod</span>(<span class="parameter" id="param-urlWithoutParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlWithoutParameters</span>, </span><span class="parameter" id="param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">data</span>, </span><span class="parameter" id="param-headers">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>}</span>)?}</span>)
+  <span class="name"><a href="../matomo_forever/MatomoForever/init.html">init</a></span><span class="signature">(<wbr><span class="parameter" id="init-param-siteUrl"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">siteUrl</span>, </span><span class="parameter" id="init-param-idSite"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">idSite</span>, </span><span class="parameter" id="init-param-id">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">id</span>, </span><span class="parameter" id="init-param-apiV"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">apiV</span>, </span><span class="parameter" id="init-param-rec"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">rec</span> = <span class="default-value">true</span>, </span><span class="parameter" id="init-param-method"><span class="type-annotation"><a href="../matomo_forever/MatomoForeverMethod.html">MatomoForeverMethod</a></span> <span class="parameter-name">method</span> = <span class="default-value">MatomoForeverMethod.post</span>, </span><span class="parameter" id="init-param-bulkSize"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/int-class.html">int</a></span> <span class="parameter-name">bulkSize</span> = <span class="default-value">0</span>, </span><span class="parameter" id="init-param-tokenAuth"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">tokenAuth</span>, </span><span class="parameter" id="init-param-queuedTracking"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">queuedTracking</span>, </span><span class="parameter" id="init-param-sendImage"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">sendImage</span>, </span><span class="parameter" id="init-param-ping"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">ping</span>, </span><span class="parameter" id="init-param-bots"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">bots</span>, </span><span class="parameter" id="init-param-debug"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a>?</span> <span class="parameter-name">debug</span>, </span><span class="parameter" id="init-param-headers"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>, </span><span class="parameter" id="init-param-persistentParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">persistentParameters</span>, </span><span class="parameter" id="init-param-sendThroughGetMethod"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span> <span class="parameter-name">sendThroughGetMethod</span>(<span class="parameter" id="param-urlWithoutParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlWithoutParameters</span>, </span><span class="parameter" id="param-urlParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlParameters</span>, </span><span class="parameter" id="param-headers">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>}</span>)?, </span><span class="parameter" id="init-param-sendThroughPostMethod"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/bool-class.html">bool</a></span>&gt;</span></span> <span class="parameter-name">sendThroughPostMethod</span>(<span class="parameter" id="param-urlWithoutParameters"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span> <span class="parameter-name">urlWithoutParameters</span>, </span><span class="parameter" id="param-data"><span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">data</span>, </span><span class="parameter" id="param-headers">{<span class="type-annotation"><a href="https://api.flutter.dev/flutter/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.flutter.dev/flutter/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>}</span>)?}</span>)
     <span class="returntype parameter">&#8594; void</span>
   </span>
   
 
 </dt>
 <dd>
-  <a href="../matomo_forever/MatomoForever/init.html">init</a> Initializes the global _matomoForever object with: <a href="../matomo_forever/MatomoForever/init.html">[...]</a>
+  <a href="../matomo_forever/MatomoForever/init.html">init</a> Initializes the global _matomoForever object with:
   
 
 </dd>
@@ -422,7 +427,7 @@ initialized.
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/sendDataOrBulk.html">sendDataOrBulk</a> Sends the given data to be added to the init data
-<code>addedData</code> Data to be added to the init data 
+<code>addedData</code> Data to be added to the init data
   
 
 </dd>
@@ -436,7 +441,7 @@ initialized.
 </dt>
 <dd>
   <a href="../matomo_forever/MatomoForever/sendQueue.html">sendQueue</a> Sends the queue to the Matomo server.
-Returns true and clears the queue in case of success. 
+Returns true and clears the queue in case of success.
   
 
 </dd>
@@ -449,13 +454,14 @@ Returns true and clears the queue in case of success.
 
 </dt>
 <dd>
-  <a href="../matomo_forever/MatomoForever/track.html">track</a> Sends or bulks the tracking of an action to Matomo server. <a href="../matomo_forever/MatomoForever/track.html">[...]</a>
+  <a href="../matomo_forever/MatomoForever/track.html">track</a> Sends or bulks the tracking of an action to Matomo server.
   
 
 </dd>
 
-      </dl>
-    </section>
+    </dl>
+  </section>
+    
 
 
   </div> <!-- /.main-content -->
@@ -476,20 +482,20 @@ Returns true and clears the queue in case of success.
 
     <h5>matomo_forever library</h5>
     <ol>
-  <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#classes">Classes</a></li>
-  <li><a href="../matomo_forever/MatomoForever-class.html">MatomoForever</a></li>
+      <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#classes">Classes</a></li>
+        <li><a href="../matomo_forever/MatomoForever-class.html">MatomoForever</a></li>
 
-  <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#extensions">Extensions</a></li>
-  <li><a href="../matomo_forever/AddIfV.html">AddIfV</a></li>
-  <li><a href="../matomo_forever/AddIfVAndNew.html">AddIfVAndNew</a></li>
-  <li><a href="../matomo_forever/ToQueryString.html">ToQueryString</a></li>
-
-
+      <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#extensions">Extensions</a></li>
+        <li><a href="../matomo_forever/AddIfV.html">AddIfV</a></li>
+        <li><a href="../matomo_forever/AddIfVAndNew.html">AddIfVAndNew</a></li>
+        <li><a href="../matomo_forever/ToQueryString.html">ToQueryString</a></li>
 
 
 
-  <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#enums">Enums</a></li>
-  <li><a href="../matomo_forever/MatomoForeverMethod-class.html">MatomoForeverMethod</a></li>
+
+
+      <li class="section-title"><a href="../matomo_forever/matomo_forever-library.html#enums">Enums</a></li>
+        <li><a href="../matomo_forever/MatomoForeverMethod.html">MatomoForeverMethod</a></li>
 
 
 </ol>
@@ -499,49 +505,49 @@ Returns true and clears the queue in case of success.
   <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
     <ol>
 
-    <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#constructors">Constructors</a></li>
-    <li><a href="../matomo_forever/MatomoForever/MatomoForever.html">MatomoForever</a></li>
+        <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#constructors">Constructors</a></li>
+          <li><a href="../matomo_forever/MatomoForever/MatomoForever.html">MatomoForever</a></li>
 
 
-    <li class="section-title">
-      <a href="../matomo_forever/MatomoForever-class.html#instance-properties">Properties</a>
-    </li>
-    <li><a href="../matomo_forever/MatomoForever/apiV.html">apiV</a></li>
-    <li><a href="../matomo_forever/MatomoForever/bots.html">bots</a></li>
-    <li><a href="../matomo_forever/MatomoForever/bulkSize.html">bulkSize</a></li>
-    <li><a href="../matomo_forever/MatomoForever/debug.html">debug</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
-    <li><a href="../matomo_forever/MatomoForever/headers.html">headers</a></li>
-    <li><a href="../matomo_forever/MatomoForever/id.html">id</a></li>
-    <li><a href="../matomo_forever/MatomoForever/idSite.html">idSite</a></li>
-    <li><a href="../matomo_forever/MatomoForever/method.html">method</a></li>
-    <li><a href="../matomo_forever/MatomoForever/persistentParameters.html">persistentParameters</a></li>
-    <li><a href="../matomo_forever/MatomoForever/ping.html">ping</a></li>
-    <li><a href="../matomo_forever/MatomoForever/queuedTracking.html">queuedTracking</a></li>
-    <li><a href="../matomo_forever/MatomoForever/rec.html">rec</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
-    <li><a href="../matomo_forever/MatomoForever/sendImage.html">sendImage</a></li>
-    <li><a href="../matomo_forever/MatomoForever/sendThroughGetMethod.html">sendThroughGetMethod</a></li>
-    <li><a href="../matomo_forever/MatomoForever/sendThroughPostMethod.html">sendThroughPostMethod</a></li>
-    <li><a href="../matomo_forever/MatomoForever/siteUrl.html">siteUrl</a></li>
-    <li><a href="../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a></li>
+        <li class="section-title">
+          <a href="../matomo_forever/MatomoForever-class.html#instance-properties">Properties</a>
+        </li>
+          <li><a href="../matomo_forever/MatomoForever/apiV.html">apiV</a></li>
+          <li><a href="../matomo_forever/MatomoForever/bots.html">bots</a></li>
+          <li><a href="../matomo_forever/MatomoForever/bulkSize.html">bulkSize</a></li>
+          <li><a href="../matomo_forever/MatomoForever/debug.html">debug</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/hashCode.html">hashCode</a></li>
+          <li><a href="../matomo_forever/MatomoForever/headers.html">headers</a></li>
+          <li><a href="../matomo_forever/MatomoForever/id.html">id</a></li>
+          <li><a href="../matomo_forever/MatomoForever/idSite.html">idSite</a></li>
+          <li><a href="../matomo_forever/MatomoForever/method.html">method</a></li>
+          <li><a href="../matomo_forever/MatomoForever/persistentParameters.html">persistentParameters</a></li>
+          <li><a href="../matomo_forever/MatomoForever/ping.html">ping</a></li>
+          <li><a href="../matomo_forever/MatomoForever/queuedTracking.html">queuedTracking</a></li>
+          <li><a href="../matomo_forever/MatomoForever/rec.html">rec</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/runtimeType.html">runtimeType</a></li>
+          <li><a href="../matomo_forever/MatomoForever/sendImage.html">sendImage</a></li>
+          <li><a href="../matomo_forever/MatomoForever/sendThroughGetMethod.html">sendThroughGetMethod</a></li>
+          <li><a href="../matomo_forever/MatomoForever/sendThroughPostMethod.html">sendThroughPostMethod</a></li>
+          <li><a href="../matomo_forever/MatomoForever/siteUrl.html">siteUrl</a></li>
+          <li><a href="../matomo_forever/MatomoForever/tokenAuth.html">tokenAuth</a></li>
 
-    <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#instance-methods">Methods</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
+        <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#instance-methods">Methods</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/toString.html">toString</a></li>
 
-    <li class="section-title inherited"><a href="../matomo_forever/MatomoForever-class.html#operators">Operators</a></li>
-    <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
+        <li class="section-title inherited"><a href="../matomo_forever/MatomoForever-class.html#operators">Operators</a></li>
+          <li class="inherited"><a href="https://api.flutter.dev/flutter/dart-core/Object/operator_equals.html">operator ==</a></li>
 
 
-    <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#static-properties">Static properties</a></li>
-    <li><a href="../matomo_forever/MatomoForever/isInitialized.html">isInitialized</a></li>
+        <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#static-properties">Static properties</a></li>
+          <li><a href="../matomo_forever/MatomoForever/isInitialized.html">isInitialized</a></li>
 
-    <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#static-methods">Static methods</a></li>
-    <li><a href="../matomo_forever/MatomoForever/init.html">init</a></li>
-    <li><a href="../matomo_forever/MatomoForever/sendDataOrBulk.html">sendDataOrBulk</a></li>
-    <li><a href="../matomo_forever/MatomoForever/sendQueue.html">sendQueue</a></li>
-    <li><a href="../matomo_forever/MatomoForever/track.html">track</a></li>
+        <li class="section-title"><a href="../matomo_forever/MatomoForever-class.html#static-methods">Static methods</a></li>
+          <li><a href="../matomo_forever/MatomoForever/init.html">init</a></li>
+          <li><a href="../matomo_forever/MatomoForever/sendDataOrBulk.html">sendDataOrBulk</a></li>
+          <li><a href="../matomo_forever/MatomoForever/sendQueue.html">sendQueue</a></li>
+          <li><a href="../matomo_forever/MatomoForever/track.html">track</a></li>
 
 </ol>
 
@@ -552,7 +558,7 @@ Returns true and clears the queue in case of success.
 <footer>
   <span class="no-break">
     matomo_forever
-      1.0.0
+      1.0.2+1
   </span>
 
   
@@ -561,7 +567,7 @@ Returns true and clears the queue in case of success.
 
 
 <script src="../static-assets/highlight.pack.js?v1"></script>
-<script src="../static-assets/script.js?v1"></script>
+<script src="../static-assets/docs.dart.js"></script>
 
 
 

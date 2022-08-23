@@ -238,8 +238,8 @@ class MyField {
       if (defaultValue is DateTime) {
         return (valueHolder.value == null
             ? null
-            : (valueHolder.value as DateTime)
-                .millisecondsSinceEpoch
+            : ((valueHolder.value as DateTime).millisecondsSinceEpoch / 1000)
+                .round()
                 .toString());
       }
     }
@@ -270,7 +270,8 @@ class MyField {
       if (defaultValue is DateTime) {
         valueHolder.value = value == null
             ? null
-            : DateTime.fromMillisecondsSinceEpoch(int.tryParse(value) ?? 0);
+            : DateTime.fromMillisecondsSinceEpoch(
+                1000 * (int.tryParse(value) ?? 0));
       }
     }
     if (valueHolder is TextEditingController) {

@@ -864,8 +864,15 @@ class MatomoForever {
     addedData.addIfVAndNew('_cvar', cvar);
     addedData.addIfVAndNew('_idvc', idVc?.toString());
     addedData.addIfVAndNew(
-        '_viewts', viewTs?.millisecondsSinceEpoch.toString());
-    addedData.addIfVAndNew('_idts', idTs?.millisecondsSinceEpoch.toString());
+        '_viewts',
+        viewTs == null
+            ? ""
+            : (viewTs.millisecondsSinceEpoch / 1000).round().toString());
+    addedData.addIfVAndNew(
+        '_idts',
+        idTs == null
+            ? ""
+            : (idTs.millisecondsSinceEpoch / 1000).round().toString());
     addedData.addIfVAndNew('_rcn', rcn);
     addedData.addIfVAndNew('_rck', rck);
     addedData.addIfVAndNew('res', res);
@@ -1001,9 +1008,17 @@ class MatomoForever {
     addedData.addIfVAndNew('ec_tx', ecTx);
     addedData.addIfVAndNew('ec_sh', ecSh);
     addedData.addIfVAndNew('ec_dt', ecDt);
-    addedData.addIfVAndNew('_ects', ects?.millisecondsSinceEpoch.toString());
+    addedData.addIfVAndNew(
+        '_ects',
+        ects == null
+            ? ""
+            : (ects.millisecondsSinceEpoch / 1000).round().toString());
     addedData.addIfVAndNew('cip', cip);
-    addedData.addIfVAndNew('cdt', cdt?.millisecondsSinceEpoch.toString());
+    addedData.addIfVAndNew(
+        'cdt',
+        cdt == null
+            ? ""
+            : (cdt.millisecondsSinceEpoch / 1000).round().toString());
     addedData.addIfVAndNew('country', country);
     addedData.addIfVAndNew('region', region);
     addedData.addIfVAndNew('city', city);
