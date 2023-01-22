@@ -9,8 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.1+1 preparing for pub.dev">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/__404error.html" afterDir="false" />
@@ -47,11 +46,10 @@
       <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString/toQueryString.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString/toQueryString.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/matomo_forever-library.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/matomo_forever-library.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/static-assets/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/static-assets/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/matomo_forever.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/matomo_forever.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matomo_forever.iml" beforeDir="false" afterPath="$PROJECT_DIR$/matomo_forever.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/matomo_forever_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/matomo_forever_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +59,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="21dneO37DDlvimMijM9GpEvI8PD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -361,7 +362,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659721559042</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1">
+      <created>1661278164021</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1661278164021</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -390,7 +398,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit." />
@@ -403,17 +410,7 @@
     <MESSAGE value="Publishing macos to pages." />
     <MESSAGE value="CI/CD adaptations" />
     <MESSAGE value="1.0.1+1 preparing for pub.dev" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.1+1 preparing for pub.dev" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/matomo_forever.dart</url>
-          <line>23</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1" />
   </component>
 </project>

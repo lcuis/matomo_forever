@@ -6,7 +6,6 @@ void main() {
   const String tokenAuth = String.fromEnvironment("token_auth");
   const String idsite = String.fromEnvironment("idsite");
   const String actionName = String.fromEnvironment("action_name");
-
   test('intialize', () {
     MatomoForever.init(
       siteUrl,

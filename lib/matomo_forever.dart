@@ -191,6 +191,10 @@ class MatomoForever {
     Map<String, String>? headers,
   })? sendThroughPostMethod;
 
+  /// [client] To be used instead of the default one to communicate with the
+  /// server.
+  http.BaseClient? client;
+
   /// [init] Initializes the global _matomoForever object with:
   ///
   /// [siteUrl] The Matomo or piwik URL such as
@@ -267,6 +271,9 @@ class MatomoForever {
   /// [urlWithoutParameters] The matomo.php URL without the parameters.
   /// [data] The parameters to be sent by post.
   /// [headers] The headers to be sent along with request.
+  ///
+  /// [client] To be used instead of the default one to communicate with the
+  /// server.
   static void init(
     String siteUrl,
     int idSite, {
@@ -295,6 +302,7 @@ class MatomoForever {
       Map<String, String>? headers,
     })?
         sendThroughPostMethod,
+    http.BaseClient? client,
   }) {
     assert(bulkSize <= 0 || (tokenAuth ?? "").isNotEmpty,
         "bulk sending is only possible with authToken");
@@ -321,6 +329,7 @@ class MatomoForever {
     if (sendThroughPostMethod != null) {
       _matomoForever.sendThroughPostMethod = sendThroughPostMethod;
     }
+    _matomoForever.client = client;
     _matomoForever._initialized = true;
   }
 
@@ -414,10 +423,23 @@ class MatomoForever {
     String urlParameters, {
     Map<String, String>? headers,
   }) async {
-    final res = await http.get(
-      Uri.parse(urlWithoutParameters + "?" + urlParameters),
-      headers: headers,
-    );
+    http.Response? res;
+    try {
+      final uri = Uri.parse(urlWithoutParameters + "?" + urlParameters);
+      if (_matomoForever.client == null) {
+        res = await http.get(
+          uri,
+          headers: headers,
+        );
+      } else {
+        res = await _matomoForever.client!.get(
+          uri,
+          headers: headers,
+        );
+      }
+    } catch (e) {
+      return (false);
+    }
     return (res.statusCode.toString()[0] == "2");
   }
 
@@ -433,12 +455,22 @@ class MatomoForever {
     Object data, {
     Map<String, String>? headers,
   }) async {
+    http.Response? res;
     try {
-      final res = await http.post(
-        Uri.parse(urlWithoutParameters),
-        body: data,
-        headers: headers,
-      );
+      Uri uri = Uri.parse(urlWithoutParameters);
+      if (_matomoForever.client == null) {
+        res = await http.post(
+          uri,
+          body: data,
+          headers: headers,
+        );
+      } else {
+        res = await _matomoForever.client!.post(
+          uri,
+          body: data,
+          headers: headers,
+        );
+      }
       return (res.statusCode.toString()[0] == "2");
     } catch (e) {
       return (false);

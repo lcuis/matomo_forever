@@ -1,3 +1,7 @@
+## 1.0.3+1
+
+* Init now takes an optional BaseClient to send the requests to the server with.
+
 ## 1.0.2+1
 
 * Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1
