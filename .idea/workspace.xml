@@ -9,14 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with.">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.4+1 updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674422279645</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="1.0.4+1 updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2">
+      <created>1674770747948</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1674770747948</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -386,6 +387,7 @@
     <MESSAGE value="1.0.1+1 preparing for pub.dev" />
     <MESSAGE value="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1" />
     <MESSAGE value="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with." />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with." />
+    <MESSAGE value="1.0.4+1 updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2" />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.4+1 updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2" />
   </component>
 </project>

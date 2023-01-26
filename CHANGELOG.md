@@ -1,3 +1,7 @@
+## 1.0.4+1
+
+* Updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2
+
 ## 1.0.3+1
 
 * Init now takes an optional BaseClient to send the requests to the server with.
