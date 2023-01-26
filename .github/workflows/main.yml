@@ -28,7 +28,7 @@ jobs:
       - run: mkdir -p docs
       - run: rm -rf docs/*
 
-      - run: flutter format .
+      - run: dart format .
       - run: flutter analyze
       - run: flutter test --dart-define="site_url=${{ secrets.site_url }}" --dart-define="token_auth=${{ secrets.token_auth }}" --dart-define="idsite=${{ secrets.idsite }}" --dart-define="action_name=${{ secrets.action_name }}"
 

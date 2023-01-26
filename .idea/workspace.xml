@@ -9,47 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1">
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with.">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/__404error.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/__404error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfV.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfV.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfV/addIfV.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfV/addIfV.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfVAndNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfVAndNew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfVAndNew/addIfVAndNew.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/AddIfVAndNew/addIfVAndNew.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever-class.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever-class.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/MatomoForever.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/MatomoForever.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/apiV.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/apiV.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/bots.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/bots.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/bulkSize.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/bulkSize.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/debug.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/debug.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/headers.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/headers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/id.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/id.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/idSite.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/idSite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/init.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/init.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/isInitialized.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/isInitialized.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/method.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/method.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/persistentParameters.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/persistentParameters.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/ping.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/ping.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/queuedTracking.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/queuedTracking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/rec.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/rec.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendDataOrBulk.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendDataOrBulk.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendImage.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendImage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendQueue.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendQueue.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendThroughGetMethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendThroughGetMethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendThroughPostMethod.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/sendThroughPostMethod.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/siteUrl.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/siteUrl.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/tokenAuth.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/tokenAuth.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/track.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/MatomoForever/track.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString/toQueryString.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/ToQueryString/toQueryString.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/api/matomo_forever/matomo_forever-library.html" beforeDir="false" afterPath="$PROJECT_DIR$/doc/api/matomo_forever/matomo_forever-library.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/matomo_forever.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/matomo_forever.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/android/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/matomo_forever_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/test/matomo_forever_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661278164021</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with.">
+      <created>1674422279645</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1674422279645</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -411,6 +385,7 @@
     <MESSAGE value="CI/CD adaptations" />
     <MESSAGE value="1.0.1+1 preparing for pub.dev" />
     <MESSAGE value="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.2+1 Unix timestamps are expected in seconds by Matomo while they were sent in milliseconds. Thanks @benedict-formigas https://github.com/lcuis/matomo_forever/issues/1" />
+    <MESSAGE value="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with." />
+    <option name="LAST_COMMIT_MESSAGE" value="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with." />
   </component>
 </project>
