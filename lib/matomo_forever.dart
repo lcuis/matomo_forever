@@ -57,7 +57,7 @@ extension ToQueryString on Map {
       if (ret.isNotEmpty) {
         ret += "&";
       }
-      ret += key.toString() + "=" + value.toString();
+      ret += "$key=$value";
     });
     return (ret);
   }
@@ -294,14 +294,12 @@ class MatomoForever {
       String urlWithoutParameters,
       String urlParameters, {
       Map<String, String>? headers,
-    })?
-        sendThroughGetMethod,
+    })? sendThroughGetMethod,
     Future<bool> Function(
       String urlWithoutParameters,
       Object data, {
       Map<String, String>? headers,
-    })?
-        sendThroughPostMethod,
+    })? sendThroughPostMethod,
     http.BaseClient? client,
   }) {
     assert(bulkSize <= 0 || (tokenAuth ?? "").isNotEmpty,
@@ -338,7 +336,7 @@ class MatomoForever {
   static Future<bool> sendQueue() async {
     Map<String, dynamic> bulk = {
       "requests": _matomoForever._queue
-          .map<String>((Map<String, String> m) => "?" + m.toQueryString())
+          .map<String>((Map<String, String> m) => "?${m.toQueryString()}")
           .toList(),
       "token_auth": _matomoForever.tokenAuth,
     };
@@ -425,7 +423,7 @@ class MatomoForever {
   }) async {
     http.Response? res;
     try {
-      final uri = Uri.parse(urlWithoutParameters + "?" + urlParameters);
+      final uri = Uri.parse("$urlWithoutParameters?$urlParameters");
       if (_matomoForever.client == null) {
         res = await http.get(
           uri,

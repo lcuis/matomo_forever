@@ -69,7 +69,7 @@ class TextFieldsForStringsMap extends StatelessWidget {
                           children: [
                             Expanded(
                               child: TextFormField(
-                                key: ObjectKey(key + "key"),
+                                key: ObjectKey("${key}key"),
                                 initialValue: key,
                                 keyboardType: TextInputType.text,
                                 decoration: const InputDecoration(
@@ -88,7 +88,7 @@ class TextFieldsForStringsMap extends StatelessWidget {
                             ),
                             Expanded(
                               child: TextFormField(
-                                key: ObjectKey(key + "value"),
+                                key: ObjectKey("${key}value"),
                                 initialValue: value,
                                 keyboardType: TextInputType.text,
                                 decoration: const InputDecoration(
@@ -147,7 +147,6 @@ class MyTextButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return (TextButton(
       onPressed: onPressed,
-      child: Text(text),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.resolveWith<Color>(
           (Set<MaterialState> states) {
@@ -172,6 +171,7 @@ class MyTextButton extends StatelessWidget {
           },
         ),
       ),
+      child: Text(text),
     ));
   }
 }
@@ -179,10 +179,9 @@ class MyTextButton extends StatelessWidget {
 extension Where on Map {
   Map where(
       bool Function(
-    dynamic key,
-    dynamic value,
-  )
-          criteria) {
+        dynamic key,
+        dynamic value,
+      ) criteria) {
     Map<dynamic, dynamic> ret = {};
     forEach((key, value) {
       if (criteria(
@@ -298,13 +297,11 @@ class MyField {
     this.widgetBuilder,
     dynamic Function(
       dynamic holder,
-    )?
-        getValue,
+    )? getValue,
     Function(
       dynamic holder,
       dynamic value,
-    )?
-        setValue,
+    )? setValue,
     this.keyboardType,
     this.sendToMatomo = true,
   }) {
@@ -2210,21 +2207,24 @@ class _MyAppState extends State<MyApp> {
             initialValue: dt.value,
             format: DateFormat("yyyy-MM-dd HH:mm"),
             onShowPicker: (context, currentValue) async {
-              final date = await showDatePicker(
-                  context: context,
-                  firstDate: DateTime(1900),
-                  initialDate: currentValue ?? DateTime.now(),
-                  lastDate: DateTime(2100));
-              if (date != null) {
-                final time = await showTimePicker(
-                  context: context,
-                  initialTime:
-                      TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
-                );
-                return DateTimeField.combine(date, time);
-              } else {
-                return currentValue;
-              }
+              return await showDatePicker(
+                      context: context,
+                      firstDate: DateTime(1900),
+                      initialDate: currentValue ?? DateTime.now(),
+                      lastDate: DateTime(2100))
+                  .then((value) async {
+                final date = value;
+                if (date != null) {
+                  final time = await showTimePicker(
+                    context: context,
+                    initialTime:
+                        TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+                  );
+                  return DateTimeField.combine(date, time);
+                } else {
+                  return currentValue;
+                }
+              });
             },
           )),
         ),

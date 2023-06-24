@@ -1,3 +1,7 @@
+## 1.0.5+1
+
+* Upgraded dependencies.
+
 ## 1.0.4+1
 
 * Updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2
