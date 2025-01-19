@@ -1,3 +1,7 @@
+## 1.0.6+1
+
+* Solved compilation issues.
+
 ## 1.0.5+1
 
 * Upgraded dependencies.

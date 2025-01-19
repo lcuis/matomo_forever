@@ -1,6 +1,6 @@
 name: matomo_forever
 description: A perennial Dart plugin to send data to a Matomo server with a Flutter example app.
-version: 1.0.5+1
+version: 1.0.6+1
 homepage: https://github.com/lcuis/matomo_forever
 
 environment:
@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  http: '>=0.1.3 <2.0.0'
+  http: '>=0.1.3'
 
 dev_dependencies:
   flutter_test:
@@ -20,23 +20,23 @@ dev_dependencies:
   flutter_lints: '>=1.0.0'
 
 flutter:
-  plugin:
-    platforms:
-      android:
-        package: li.jod.matomo_forever
-        pluginClass: MatomoForeverPlugin
-      ios:
-        pluginClass: MatomoForeverPlugin
-      macos:
-        pluginClass: MatomoForeverPlugin
-        default_package: matomo_forever
-      linux:
-        pluginClass: MatomoForeverPlugin
-        default_package: matomo_forever
-      windows:
-        pluginClass: MatomoForeverPlugin
-        default_package: matomo_forever
-      web:
-        pluginClass: MatomoForeverPlugin
-        fileName: matomo_forever.dart
-        default_package: matomo_forever
+#  plugin:
+#    platforms:
+#      android:
+#        package: li.jod.matomo_forever
+#        pluginClass: MatomoForeverPlugin
+#      ios:
+#        pluginClass: MatomoForeverPlugin
+#      macos:
+#        pluginClass: MatomoForeverPlugin
+#        default_package: matomo_forever
+#      linux:
+#        pluginClass: MatomoForeverPlugin
+#        default_package: matomo_forever
+#      windows:
+#        pluginClass: MatomoForeverPlugin
+#        default_package: matomo_forever
+#      web:
+#        pluginClass: MatomoForeverPlugin
+#        fileName: matomo_forever.dart
+#        default_package: matomo_forever
