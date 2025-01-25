@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '21'
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          channel: 'dev'
+          channel: stable
       - run: flutter pub get
 
       - run: mkdir -p docs
@@ -87,6 +87,8 @@ jobs:
           distribution: 'zulu'
           java-version: '21'
       - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
 
 #      - run: flutter upgrade
 #      - run: flutter pub get
@@ -126,9 +128,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: subosito/flutter-action@v1
+      - uses: subosito/flutter-action@v2
         with:
-          channel: beta
+          channel: stable
       - run: pushd example&&flutter config --enable-windows-desktop
       - run: pushd example&&flutter create .&&flutter pub upgrade&&flutter build windows
       - run: md docs
