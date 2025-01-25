@@ -19,7 +19,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: '17.x'
+          java-version: '21'
       - uses: subosito/flutter-action@v1
         with:
           channel: 'dev'
@@ -37,7 +37,7 @@ jobs:
       - run: zip -r -9 docs/matomo_forever_example_android.zip docs/matomo_forever_example_android.apk
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
           prerelease: false
           files: docs/matomo_forever_example_android.zip
           automatic_release_tag: latest-android
@@ -51,7 +51,7 @@ jobs:
       - run: pushd example&&flutter pub upgrade&&flutter build linux --release&&popd&&zip -r -9 docs/matomo_forever_example_linux.zip example/build/linux/x64/release/bundle/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
           prerelease: false
           files: docs/matomo_forever_example_linux.zip
           automatic_release_tag: latest-linux
@@ -59,7 +59,7 @@ jobs:
       - run: pushd example&&flutter pub upgrade&&flutter build web --web-renderer canvaskit --release&&popd&&zip -r -9 docs/matomo_forever_example_web.zip example/build/web/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
           prerelease: false
           files: docs/matomo_forever_example_web.zip
           automatic_release_tag: latest-web
@@ -76,7 +76,7 @@ jobs:
           jekyll: false
           keep_history: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}
 
   macos:
     runs-on: macos-latest
@@ -85,7 +85,7 @@ jobs:
       - uses: actions/setup-java@v2
         with:
           distribution: 'zulu'
-          java-version: '11'
+          java-version: '21'
       - uses: subosito/flutter-action@v2
 
 #      - run: flutter upgrade
@@ -106,7 +106,7 @@ jobs:
       - run: zip -r -9 docs/matomo_forever_example_macos.zip example/build/macos/Build/Products/Release/
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
           prerelease: false
           files: docs/matomo_forever_example_macos.zip
           automatic_release_tag: latest-macos
@@ -120,7 +120,7 @@ jobs:
           jekyll: false
           keep_history: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}
 
   windows:
     runs-on: windows-latest
@@ -140,7 +140,7 @@ jobs:
           path: 'example/build/windows/runner/Release/'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
-          repo_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
           prerelease: false
           files: docs/matomo_forever_example_windows.zip
           automatic_release_tag: latest-windows
@@ -154,4 +154,4 @@ jobs:
           jekyll: false
           keep_history: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}
