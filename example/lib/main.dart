@@ -148,23 +148,23 @@ class MyTextButton extends StatelessWidget {
     return (TextButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.pressed)) {
+        backgroundColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.pressed)) {
               return (Colors.orangeAccent.withBlue(200));
             }
-            if (states.contains(MaterialState.disabled)) {
+            if (states.contains(WidgetState.disabled)) {
               return (Colors.white38);
             }
             return (Colors.orangeAccent);
           },
         ),
-        foregroundColor: MaterialStateProperty.resolveWith<Color>(
-          (Set<MaterialState> states) {
-            if (states.contains(MaterialState.pressed)) {
+        foregroundColor: WidgetStateProperty.resolveWith<Color>(
+          (Set<WidgetState> states) {
+            if (states.contains(WidgetState.pressed)) {
               return (Colors.black);
             }
-            if (states.contains(MaterialState.disabled)) {
+            if (states.contains(WidgetState.disabled)) {
               return (Colors.grey);
             }
             return (Colors.black);
@@ -2215,11 +2215,14 @@ class _MyAppState extends State<MyApp> {
                   .then((value) async {
                 final date = value;
                 if (date != null) {
-                  final time = await showTimePicker(
-                    context: context,
-                    initialTime:
-                        TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
-                  );
+                  TimeOfDay? time;
+                  if(context.mounted) {
+                    time = await showTimePicker(
+                      context: context,
+                      initialTime:
+                      TimeOfDay.fromDateTime(currentValue ?? DateTime.now()),
+                    );
+                  }
                   return DateTimeField.combine(date, time);
                 } else {
                   return currentValue;
@@ -2252,8 +2255,8 @@ class _MyAppState extends State<MyApp> {
                   : null,
               trackColor: defaultValue
                   ? null
-                  : MaterialStateProperty.resolveWith<Color>(
-                      (Set<MaterialState> states) {
+                  : WidgetStateProperty.resolveWith<Color>(
+                      (Set<WidgetState> states) {
                         return (currentValue.value == null
                             ? Colors.grey
                             : Colors.black45);

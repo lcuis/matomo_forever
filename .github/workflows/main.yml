@@ -139,7 +139,7 @@ jobs:
         with:
           type: 'zip'
           filename: 'docs/matomo_forever_example_windows.zip'
-          path: 'example/build/windows/runner/Release/'
+          path: 'example/build/windows/x64/runner/Release/'
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GH_PERSONNAL_ACCESS_TOKEN_MATOMO }}"
