@@ -9,20 +9,9 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="1.0.6+1 solved compilation issues.">
+    <list default="true" id="a457979d-f677-41eb-b53f-c2d914fbcdc1" name="Default Changelist" comment="enabled Swift Package Manager">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/main.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/main.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/AppDelegate.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/example/ios/Runner/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/ios/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Assets/.gitkeep" beforeDir="false" afterPath="$PROJECT_DIR$/ios/matomo_forever/Package.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/MatomoForeverPlugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/MatomoForeverPlugin.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Classes/SwiftMatomoForeverPlugin.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/matomo_forever/Sources/matomo_forever/SwiftMatomoForeverPlugin.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/matomo_forever.podspec" beforeDir="false" afterPath="$PROJECT_DIR$/ios/matomo_forever.podspec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/matomo_forever.iml" beforeDir="false" afterPath="$PROJECT_DIR$/matomo_forever.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -440,7 +429,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737867227308</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="enabled Swift Package Manager">
+      <option name="closed" value="true" />
+      <created>1737873760863</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1737873760863</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -485,6 +482,7 @@
     <MESSAGE value="1.0.3+1 Init now takes an optional BaseClient to send the requests to the server with." />
     <MESSAGE value="1.0.4+1 updated gradle and kotlin versions for https://github.com/lcuis/matomo_forever/issues/2" />
     <MESSAGE value="1.0.6+1 solved compilation issues." />
-    <option name="LAST_COMMIT_MESSAGE" value="1.0.6+1 solved compilation issues." />
+    <MESSAGE value="enabled Swift Package Manager" />
+    <option name="LAST_COMMIT_MESSAGE" value="enabled Swift Package Manager" />
   </component>
 </project>
